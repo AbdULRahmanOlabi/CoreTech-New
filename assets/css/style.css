@@ -2,7 +2,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Cairo", sans-serif;
   color: #444444;
 }
 
@@ -22,7 +22,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 /* Colors */
@@ -30,12 +30,9 @@ h6 {
   --color-primary: #e30512;
 }
 
-
 /*--------------------------------------------------------------
 # Scrollbar
 --------------------------------------------------------------*/
-
-
 
 /*--------------------------------------------------------------
 # Preloader
@@ -55,7 +52,8 @@ h6 {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border: 6px solid #fff;
-  border-color: var(--color-primary) transparent var(--color-primary) transparent;
+  border-color: var(--color-primary) transparent var(--color-primary)
+    transparent;
   border-radius: 50%;
   width: 60px;
   height: 60px;
