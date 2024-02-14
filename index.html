@@ -19,6 +19,7 @@
     rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
 
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -53,7 +54,8 @@
           <li class="dropdown"><a href="#"><i class="bi bi-translate"></i></a>
             <ul>
               <li><a href="#"><iconify-icon icon="emojione-v1:flag-for-united-states"></iconify-icon>English</a></li>
-              <li><a href="index-AR.html"><iconify-icon icon="emojione-v1:flag-for-united-arab-emirates"></iconify-icon>العربية</a>
+              <li><a href="index-AR.html"><iconify-icon
+                    icon="emojione-v1:flag-for-united-arab-emirates"></iconify-icon>العربية</a>
               </li>
             </ul>
           </li>
@@ -913,22 +915,22 @@
         <div class="row" data-aos="fade-up" data-aos-delay="100">
 
           <div class="col-lg-12">
-            <form action="contact.php" method="post" role="form" class="php-email-form">
+            <form action="meeting.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Company Name" required>
+                  <input type="text" name="cname" class="form-control" id="name" placeholder="Company Name" required>
                 </div>
                 <div class="col form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Company Email" required>
+                  <input type="email" class="form-control" name="cemail" id="email" placeholder="Company Email"
+                    required>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Meeting Subject"
+                <input type="text" class="form-control" name="msubject" id="subject" placeholder="Meeting Subject"
                   required>
               </div>
               <div class="form-group">
-
-                <input id="startDate" class="form-control" type="date" />
+                <input name="startDate" id="startDate" class="form-control" type="date" />
               </div>
               <div class="text-center"><button type="submit">Schedule Meeting</button></div>
             </form>
@@ -995,9 +997,6 @@
               <div class="form-group">
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
-              <div class="my-3">
-
-              </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
           </div>
@@ -1056,12 +1055,19 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Team</h4>
-            <p>Send Us Your CV! We Will Contact You When There’s An Opening!
-            </p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Join Us">
+            <p>Send Us Your CV! We Will Contact You When There’s An Opening!</p>
+            <form id="joinForm" action="Cv_form.php" method="post" enctype="multipart/form-data"
+              onsubmit="submitForm()">
+              <div class="input-group">
+                <div class="custom-file">
+                  <input class="form-control custom-file-label" accept=".pdf,.doc,.docx" type="file" name="cv" id="cv"
+                    onchange="updateFileName(this)">
+                </div>
+              </div>
+              <input id="joinBtn" type="submit" value="Join Us">
             </form>
           </div>
+
 
         </div>
       </div>

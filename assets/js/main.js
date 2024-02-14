@@ -307,7 +307,6 @@
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
-  
   /**
    * Preloader
    */
@@ -318,3 +317,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+/**
+ * Date Picker
+ */
+
+// Get today's date in the format YYYY-MM-DD
+var today = new Date().toISOString().split("T")[0];
+
+// Set the min attribute of the input field to today's date
+document.getElementById("startDate").setAttribute("min", today);
+
+/**
+ * CV Button Process
+ */
+
+function updateFileName(input) {
+  var fileName = input.files[0].name;
+  document.getElementById("cvLabel").innerHTML = fileName;
+}
+
+function submitForm() {
+  // Disable the button and change its text
+  var joinBtn = document.getElementById("joinBtn");
+  joinBtn.disabled = true;
+  joinBtn.value = "Sending...";
+
+  // Submit the form
+  document.getElementById("joinForm").submit();
+}
