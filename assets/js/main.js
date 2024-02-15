@@ -164,41 +164,53 @@
       }
     }
   });
-  /**
-   * Clients Slider
-   */
-  new Swiper(".clients-slider", {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    slidesPerView: "auto",
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 40,
+  document.addEventListener("DOMContentLoaded", function() {
+    // Initialize Swiper
+    var swiper = new Swiper(".clients-slider", {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
       },
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 60,
+      slidesPerView: "auto",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 80,
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 60,
+        },
+        640: {
+          slidesPerView: 4,
+          spaceBetween: 80,
+        },
+        992: {
+          slidesPerView: 6,
+          spaceBetween: 120,
+        },
       },
-      992: {
-        slidesPerView: 6,
-        spaceBetween: 120,
-      },
-    },
+    });
+  
+    // Add click event listener to next button
+    document.querySelector(".swiper-button-next").addEventListener("click", function(event) {
+      // Go to the next slide
+      swiper.slideNext();
+    });
+  
+    // Add click event listener to previous button
+    document.querySelector(".swiper-button-prev").addEventListener("click", function(event) {
+      // Go to the previous slide
+      swiper.slidePrev();
+    });
   });
+  
 
   /**
    * Porfolio isotope and filter

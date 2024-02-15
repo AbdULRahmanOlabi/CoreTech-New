@@ -640,6 +640,98 @@ section {
   filter: none;
 }
 
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background-color: #e30512; /* Change to your desired color */
+}
+
+/* Style for Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  position: fixed;
+  width: 40px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  background-color: #e30512; /* Background color */
+  color: #fff; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Make them circular */
+  z-index: 10; /* Ensure they appear above slides */
+  cursor: pointer; /* Show pointer cursor on hover */
+  top: 150%; /* Align vertically */
+  transform: translateY(-50%);
+}
+
+/* Adjust the position of next button */
+.swiper-button-next {
+  right: calc(45% + 10px); /* Adjust right distance from container edge */
+  margin-left: 20px; /* Adjust the distance between the two buttons */
+}
+
+/* Adjust the position of prev button */
+.swiper-button-prev {
+  left: calc(45% + 10px); /* Adjust left distance from container edge */
+  margin-right: 20px; /* Adjust the distance between the two buttons */
+}
+
+/* Style for arrow icons */
+.swiper-button-next::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg); /* Rotate the arrow for next button */
+  width: 10px; /* Adjust arrow width */
+  height: 10px; /* Adjust arrow height */
+  border-top: 2px solid #fff; /* Adjust arrow thickness and color */
+  border-right: 2px solid #fff; /* Adjust arrow thickness and color */
+
+}
+
+.swiper-button-prev::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-135deg); /* Rotate the arrow for previous button */
+  width: 10px; /* Adjust arrow width */
+  height: 10px; /* Adjust arrow height */
+  border-top: 2px solid #fff; /* Adjust arrow thickness and color */
+  border-right: 2px solid #fff; /* Adjust arrow thickness and color */
+
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  /* Adjust the position of next button for mobile */
+  .swiper-button-next {
+    right: calc(35% + 10px); /* Adjust right distance from container edge */
+    margin-left: 10px; /* Adjust the distance between the two buttons */
+  }
+
+  /* Adjust the position of prev button for mobile */
+  .swiper-button-prev {
+    left: calc(35% + 10px); /* Adjust left distance from container edge */
+    margin-right: 10px; /* Adjust the distance between the two buttons */
+  }
+
+  /* Style for Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  position: fixed;
+  width: 40px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  background-color: #e30512; /* Background color */
+  color: #fff; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Make them circular */
+  z-index: 10; /* Ensure they appear above slides */
+  cursor: pointer; /* Show pointer cursor on hover */
+  top: 140%; /* Align vertically */
+  transform: translateY(-50%);
+}
+}
+
+
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/

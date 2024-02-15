@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (mail($to, $msubject, $email_content, $headers)) {
       // If mail sent successfully for the Meeting form
       echo "<script>
-                    alert('Your Meeting Has Been Scheduled Successfully.');
+                    alert('Thanks For Your Contact, We Will Contact You Soon To Schedule The Meeting');
                   </script>";
     } else {
       // If mail sending failed for the Meeting form
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Send email for the Contact form
     if (mail($to, $subject, $email_content, $headers)) {
       // If mail sent successfully for the Contact form
-      echo "<script>alert('Your Message Has Been Sent Successfully.');</script>";
+      echo "<script>alert('Thanks For Your Contact, Your Message Has Been Sent Successfully.');</script>";
     } else {
       // If mail sending failed for the Contact form
       echo "<script>alert('Failed To Send Your Message. Please Try Again Later.');</script>";
@@ -253,6 +253,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
             </div>
           </div>
           <!-- <div class="swiper-pagination"></div> -->
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
 
       </div>
@@ -330,7 +333,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
               <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="1" class="purecounter"></span>
               <p>Happy Clients</p>
             </div>
           </div>
@@ -338,7 +341,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="count-box">
               <i class="bi bi-pass"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="202" data-purecounter-duration="1" class="purecounter"></span>
               <p>Projects</p>
             </div>
           </div>
@@ -1068,14 +1071,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@example.com</p>
+                  <!-- <p>info@CoreTech-MENA.com</p> -->
+                  <p><a href="mailto:info@CoreTech-MENA.com">Info@CoreTech-MENA.com</a></p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-phone-call"></i>
                   <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
+                  <p>+971 561212043</p>
                 </div>
               </div>
             </div>
@@ -1124,8 +1128,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
               A108 Adam Street <br>
               New York, NY 535022<br>
               United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              <strong>Phone:</strong> +971 561212043<br>
+              <strong>Email:</strong> info@CoreTech-MENA.com<br>
             </p>
           </div>
 
@@ -1153,7 +1157,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Team</h4>
-            <p>Send Us Your CV! We Will Contact You When There’s An Opening!</p>
+            <p>Send Us Your CV! We Will Contact You ASAP..</p>
             <form id="joinForm" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" onsubmit="submitForm()">
               <div class="input-group">
                 <div class="custom-file">
