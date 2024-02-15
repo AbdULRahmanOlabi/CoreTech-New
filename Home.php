@@ -1,123 +1,121 @@
 <?php
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Check if form fields are set for the Meeting form
-    if (isset($_POST['cname']) && isset($_POST['cemail']) && isset($_POST['msubject']) && isset($_POST['startDate'])) {
-        // Get form data for the Meeting form
-        $cname = $_POST['cname'];
-        $cemail = $_POST['cemail'];
-        $msubject = "CoreTech-MENA - " . $_POST['msubject'];
-        $startDate = $_POST['startDate'];
+  // Check if form fields are set for the Meeting form
+  if (isset($_POST['cname']) && isset($_POST['cemail']) && isset($_POST['msubject']) && isset($_POST['startDate'])) {
+    // Get form data for the Meeting form
+    $cname = $_POST['cname'];
+    $cemail = $_POST['cemail'];
+    $msubject = "CoreTech-MENA - " . $_POST['msubject'];
+    $startDate = $_POST['startDate'];
 
-        // Email recipient for the Meeting form
-        $to = "abd.alrahman.olabi@gmail.com";
+    // Email recipient for the Meeting form
+    $to = "abd.alrahman.olabi@gmail.com";
 
-        // Email headers for the Meeting form
-        $headers = "From: $cname <$cemail>\r\n";
-        $headers .= "Reply-To: $cemail\r\n";
-        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+    // Email headers for the Meeting form
+    $headers = "From: $cname <$cemail>\r\n";
+    $headers .= "Reply-To: $cemail\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-        // Email content for the Meeting form
-        $email_content = "<p><strong>Company Name:</strong> $cname</p>";
-        $email_content .= "<p><strong>Company Email:</strong> $cemail</p>";
-        $email_content .= "<p><strong>Meeting Subject:</strong> $msubject</p>";
-        $email_content .= "<p><strong>Meeting Date:</strong> $startDate</p>";
+    // Email content for the Meeting form
+    $email_content = "<p><strong>Company Name:</strong> $cname</p>";
+    $email_content .= "<p><strong>Company Email:</strong> $cemail</p>";
+    $email_content .= "<p><strong>Meeting Subject:</strong> $msubject</p>";
+    $email_content .= "<p><strong>Meeting Date:</strong> $startDate</p>";
 
-        // Send email for the Meeting form
-        if (mail($to, $msubject, $email_content, $headers)) {
-            // If mail sent successfully for the Meeting form
-            echo "<script>
+    // Send email for the Meeting form
+    if (mail($to, $msubject, $email_content, $headers)) {
+      // If mail sent successfully for the Meeting form
+      echo "<script>
                     alert('Your Meeting Has Been Scheduled Successfully.');
                   </script>";
-        } else {
-            // If mail sending failed for the Meeting form
-            echo "<script>
+    } else {
+      // If mail sending failed for the Meeting form
+      echo "<script>
                     alert('Failed To Schedule Your Meeting. Please Try Again Later.');
                   </script>";
-        }
-    } elseif (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])) {
-        // Get form data for the Contact form
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $subject = "CoreTech-MENA - " . $_POST['subject'];
-        $message = $_POST['message'];
+    }
+  } elseif (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])) {
+    // Get form data for the Contact form
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = "CoreTech-MENA - " . $_POST['subject'];
+    $message = $_POST['message'];
 
-        // Email recipient for the Contact form
-        $to = "abd.alrahman.olabi@gmail.com";
+    // Email recipient for the Contact form
+    $to = "abd.alrahman.olabi@gmail.com";
 
-        // Email headers for the Contact form
-        $headers = "From: $name <$email>\r\n";
-        $headers .= "Reply-To: $email\r\n";
-        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+    // Email headers for the Contact form
+    $headers = "From: $name <$email>\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-        // Email content for the Contact form
-        $email_content = "<p><strong>Name:</strong> $name</p>";
-        $email_content .= "<p><strong>Email:</strong> $email</p>";
-        $email_content .= "<p><strong>Subject:</strong> $subject</p>";
-        $email_content .= "<p><strong>Message:</strong> $message</p>";
+    // Email content for the Contact form
+    $email_content = "<p><strong>Name:</strong> $name</p>";
+    $email_content .= "<p><strong>Email:</strong> $email</p>";
+    $email_content .= "<p><strong>Subject:</strong> $subject</p>";
+    $email_content .= "<p><strong>Message:</strong> $message</p>";
 
-        // Send email for the Contact form
-        if (mail($to, $subject, $email_content, $headers)) {
-            // If mail sent successfully for the Contact form
-            echo "<script>alert('Your Message Has Been Sent Successfully.');</script>";
-        } else {
-            // If mail sending failed for the Contact form
-            echo "<script>alert('Failed To Send Your Message. Please Try Again Later.');</script>";
-        }
-    } 
+    // Send email for the Contact form
+    if (mail($to, $subject, $email_content, $headers)) {
+      // If mail sent successfully for the Contact form
+      echo "<script>alert('Your Message Has Been Sent Successfully.');</script>";
+    } else {
+      // If mail sending failed for the Contact form
+      echo "<script>alert('Failed To Send Your Message. Please Try Again Later.');</script>";
+    }
+  }
 }
 
 // Check if the form for CV submission is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
-    // Set recipient email address for CV submission
-    $to = "abd.alrahman.olabi@gmail.com";
+  // Set recipient email address for CV submission
+  $to = "abd.alrahman.olabi@gmail.com";
 
-    // Set sender email address for CV submission
-    $from = "abd.alrahman.olabi@gmail.com"; 
+  // Set sender email address for CV submission
+  $from = "abd.alrahman.olabi@gmail.com";
 
-    // Email subject for CV submission
-    $subject = "CoreTech-MENA - CV Submission";
+  // Email subject for CV submission
+  $subject = "CoreTech-MENA - CV Submission";
 
-    // Initial message body for CV submission
-    $message = "A CV has been submitted.\n";
+  // Initial message body for CV submission
+  $message = "A CV has been submitted.\n";
 
-    // Get file details for CV submission
-    $file = $_FILES["cv"]["tmp_name"];
-    $filename = $_FILES["cv"]["name"];
-    $filetype = $_FILES["cv"]["type"];
+  // Get file details for CV submission
+  $file = $_FILES["cv"]["tmp_name"];
+  $filename = $_FILES["cv"]["name"];
+  $filetype = $_FILES["cv"]["type"];
 
-    // Check if file is not empty for CV submission
-    if (!empty($file)) {
-        // Prepare email headers for CV submission
-        $headers = "From: $from" . "\r\n";
-        $headers .= "Reply-To: $from" . "\r\n";
-        $headers .= "MIME-Version: 1.0" . "\r\n";
-        $headers .= "Content-Type: multipart/mixed; boundary=\"boundary\"" . "\r\n";
+  // Check if file is not empty for CV submission
+  if (!empty($file)) {
+    // Prepare email headers for CV submission
+    $headers = "From: $from" . "\r\n";
+    $headers .= "Reply-To: $from" . "\r\n";
+    $headers .= "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-Type: multipart/mixed; boundary=\"boundary\"" . "\r\n";
 
-        // Encode file attachment for CV submission
-        $attachment = chunk_split(base64_encode(file_get_contents($file)));
+    // Encode file attachment for CV submission
+    $attachment = chunk_split(base64_encode(file_get_contents($file)));
 
-        // Construct message with file attachment for CV submission
-        $message .= "--boundary\r\n";
-        $message .= "Content-Type: $filetype; name=\"$filename\"\r\n";
-        $message .= "Content-Disposition: attachment; filename=\"$filename\"\r\n";
-        $message .= "Content-Transfer-Encoding: base64\r\n\r\n";
-        $message .= $attachment . "\r\n";
-        $message .= "--boundary--";
+    // Construct message with file attachment for CV submission
+    $message .= "--boundary\r\n";
+    $message .= "Content-Type: $filetype; name=\"$filename\"\r\n";
+    $message .= "Content-Disposition: attachment; filename=\"$filename\"\r\n";
+    $message .= "Content-Transfer-Encoding: base64\r\n\r\n";
+    $message .= $attachment . "\r\n";
+    $message .= "--boundary--";
 
-        // Attempt to send email for CV submission
-        if (mail($to, $subject, $message, $headers)) {
-            echo "<script>alert('Your CV Has Been Sent Successfully.'); </script>";
-        } else {
-            echo "<script>alert('Failed To Send Your CV. Please Try Again Later.');</script>";
-        }
+    // Attempt to send email for CV submission
+    if (mail($to, $subject, $message, $headers)) {
+      echo "<script>alert('Your CV Has Been Sent Successfully.'); </script>";
     } else {
-        echo "<script>alert('No File Uploaded.');</script>";
+      echo "<script>alert('Failed To Send Your CV. Please Try Again Later.');</script>";
     }
+  } else {
+    echo "<script>alert('No File Uploaded.');</script>";
+  }
 }
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -135,9 +133,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
 
 
@@ -175,8 +171,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <li class="dropdown"><a href="#"><i class="bi bi-translate"></i></a>
             <ul>
               <li><a href="#"><iconify-icon icon="emojione-v1:flag-for-united-states"></iconify-icon>English</a></li>
-              <li><a href="Home-AR"><iconify-icon
-                    icon="emojione-v1:flag-for-united-arab-emirates"></iconify-icon>العربية</a>
+              <li><a href="Home-AR"><iconify-icon icon="emojione-v1:flag-for-united-arab-emirates"></iconify-icon>العربية</a>
               </li>
             </ul>
           </li>
@@ -229,56 +224,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
             </div>
             <div class="swiper-slide"><img src="assets/img/clients/OBAA - Logo.png" class="img-fluid" alt="OBAA - Logo">
             </div>
-            <div class="swiper-slide"><img src="assets/img/clients/Future - Logo.png" class="img-fluid"
-                alt="Future - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/AL-Farabi - Logo.png" class="img-fluid"
-                alt="AL-Farabi - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Tafawki - Logo.png" class="img-fluid"
-                alt="Tafawki - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/AL-Hekma - Logo.png" class="img-fluid"
-                alt="AL-Hekma - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Resaleh - Logo.png" class="img-fluid"
-                alt="Resaleh - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Manaret-Al-Majd - Logo.png" class="img-fluid"
-                alt="Manaret Al-Majd - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Star - Logo.png" class="img-fluid"
-                alt="Syrian Star - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Mansour - Logo.png" class="img-fluid"
-                alt="Mansour - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Hadara - Logo.png" class="img-fluid"
-                alt="Hadara - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Massar - Logo.png" class="img-fluid"
-                alt="Massar - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Al-Abjadiya - Logo.png" class="img-fluid"
-                alt="Al-Abjadiya - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Community - Logo.png" class="img-fluid"
-                alt="Syrian Community - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Promies - Logo.png" class="img-fluid"
-                alt="Promies - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Yarmouk - Logo.png" class="img-fluid"
-                alt="Yarmouk - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Al-Ola - Logo.png" class="img-fluid"
-                alt="Al-Ola - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Manara-International - Logo.png" class="img-fluid"
-                alt="Manara International - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Flowers - Logo.png" class="img-fluid"
-                alt="Syrian Flowers - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Binaa - Logo.png" class="img-fluid"
-                alt="Binaa - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/BinaaPy - Logo.png" class="img-fluid"
-                alt="BinaaPy - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Orchid - Logo.png" class="img-fluid"
-                alt="Orchid - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Aleppo - Logo.png" class="img-fluid"
-                alt="Aleppo - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Sama-Al-Shahbaa - Logo.png" class="img-fluid"
-                alt="Sama Al-Shahbaa - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/DIVS - Logo.png" class="img-fluid"
-                alt="DIVS School - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Oasis-Online-School - Logo.png"
-                class="img-fluid" alt="Syrian Oasis Online School"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/AlFajr - Logo.png" class="img-fluid"
-                alt="AlFajr - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Future - Logo.png" class="img-fluid" alt="Future - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/AL-Farabi - Logo.png" class="img-fluid" alt="AL-Farabi - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Tafawki - Logo.png" class="img-fluid" alt="Tafawki - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/AL-Hekma - Logo.png" class="img-fluid" alt="AL-Hekma - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Resaleh - Logo.png" class="img-fluid" alt="Resaleh - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Manaret-Al-Majd - Logo.png" class="img-fluid" alt="Manaret Al-Majd - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Star - Logo.png" class="img-fluid" alt="Syrian Star - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Mansour - Logo.png" class="img-fluid" alt="Mansour - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Hadara - Logo.png" class="img-fluid" alt="Hadara - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Massar - Logo.png" class="img-fluid" alt="Massar - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Al-Abjadiya - Logo.png" class="img-fluid" alt="Al-Abjadiya - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Community - Logo.png" class="img-fluid" alt="Syrian Community - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Promies - Logo.png" class="img-fluid" alt="Promies - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Yarmouk - Logo.png" class="img-fluid" alt="Yarmouk - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Al-Ola - Logo.png" class="img-fluid" alt="Al-Ola - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Manara-International - Logo.png" class="img-fluid" alt="Manara International - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Flowers - Logo.png" class="img-fluid" alt="Syrian Flowers - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Binaa - Logo.png" class="img-fluid" alt="Binaa - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/BinaaPy - Logo.png" class="img-fluid" alt="BinaaPy - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Orchid - Logo.png" class="img-fluid" alt="Orchid - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Aleppo - Logo.png" class="img-fluid" alt="Aleppo - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Sama-Al-Shahbaa - Logo.png" class="img-fluid" alt="Sama Al-Shahbaa - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/DIVS - Logo.png" class="img-fluid" alt="DIVS School - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Oasis-Online-School - Logo.png" class="img-fluid" alt="Syrian Oasis Online School"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/AlFajr - Logo.png" class="img-fluid" alt="AlFajr - Logo"></div>
             <div class="swiper-slide"><img src="assets/img/clients/SVS - Logo.png" class="img-fluid" alt="SVS-Logo">
             </div>
           </div>
@@ -360,8 +330,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
               <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
               <p>Happy Clients</p>
             </div>
           </div>
@@ -369,8 +338,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="count-box">
               <i class="bi bi-pass"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
               <p>Projects</p>
             </div>
           </div>
@@ -378,8 +346,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
               <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
-                class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
               <p>Hours Of Support</p>
             </div>
           </div>
@@ -387,8 +354,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
               <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="16" data-purecounter-duration="1"
-                class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="16" data-purecounter-duration="1" class="purecounter"></span>
               <p>Hard Workers</p>
             </div>
           </div>
@@ -405,8 +371,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-              <i class=""><iconify-icon icon="carbon:ibm-open-enterprise-languages" width="1.2em"
-                  height="1.2em"></iconify-icon></i>
+              <i class=""><iconify-icon icon="carbon:ibm-open-enterprise-languages" width="1.2em" height="1.2em"></iconify-icon></i>
               <h4 class="d-none d-lg-block">Full-Stack Development</h4>
             </a>
           </li>
@@ -1059,16 +1024,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                   <input type="text" name="cname" class="form-control" id="name" placeholder="Company Name" required>
                 </div>
                 <div class="col form-group">
-                  <input type="email" class="form-control" name="cemail" id="email" placeholder="Company Email"
-                    required>
+                  <input type="email" class="form-control" name="cemail" id="email" placeholder="Company Email" required>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="msubject" id="subject" placeholder="Meeting Subject"
-                  required>
+                <input type="text" class="form-control" name="msubject" id="subject" placeholder="Meeting Subject" required>
               </div>
               <div class="form-group">
-                <input name="startDate" id="startDate" class="form-control" type="date" placeholder="Meeting Suggested Date" required/>
+                <input name="startDate" id="startDate" class="form-control" type="date" placeholder="Meeting Suggested Date" required />
               </div>
               <div class="text-center"><button type="submit">Schedule Meeting</button></div>
             </form>
@@ -1139,10 +1102,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
             </form>
           </div>
 
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.327393651882!2d36.291533475492635!3d33.518872573362515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518e77918a57e61%3A0x9b06adbeca3cc528!2sCoreTech-Mena!5e0!3m2!1sen!2sde!4v1707744452520!5m2!1sen!2sde"
-            width="600" height="450" style="border:0; padding-top:10px !important; border-radius:5px !important;"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.327393651882!2d36.291533475492635!3d33.518872573362515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518e77918a57e61%3A0x9b06adbeca3cc528!2sCoreTech-Mena!5e0!3m2!1sen!2sde!4v1707744452520!5m2!1sen!2sde" width="600" height="450" style="border:0; padding-top:10px !important; border-radius:5px !important;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
 
@@ -1194,12 +1154,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Team</h4>
             <p>Send Us Your CV! We Will Contact You When There’s An Opening!</p>
-            <form id="joinForm" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data"
-              onsubmit="submitForm()">
+            <form id="joinForm" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" onsubmit="submitForm()">
               <div class="input-group">
                 <div class="custom-file">
-                  <input class="form-control custom-file-label" accept=".pdf,.doc,.docx" type="file" name="cv" id="cv"
-                    onchange="updateFileName(this)">
+                  <input class="form-control custom-file-label" accept=".pdf,.doc,.docx" type="file" name="cv" id="cv" onchange="updateFileName(this)">
                 </div>
               </div>
               <input id="joinBtn" type="submit" value="Join Us">
@@ -1231,8 +1189,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
 
