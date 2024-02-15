@@ -1079,7 +1079,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                 <div class="info-box mt-4">
                   <i class="bx bx-phone-call"></i>
                   <h3>Call Us</h3>
-                  <p>+971 561212043</p>
+                  <p><a href="tel:00971561212043">+971 561212043</a></p>
                 </div>
               </div>
             </div>
@@ -1128,8 +1128,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
               A108 Adam Street <br>
               New York, NY 535022<br>
               United States <br><br>
-              <strong>Phone:</strong> +971 561212043<br>
-              <strong>Email:</strong> info@CoreTech-MENA.com<br>
+              <strong>Phone:</strong> <a href="tel:00971561212043">+971 561212043</a><br>
+              <strong>Email:</strong> <a href="mailto:info@CoreTech-MENA.com">Info@CoreTech-MENA.com</a><br>
             </p>
           </div>
 
