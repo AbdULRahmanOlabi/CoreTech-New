@@ -156,7 +156,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
-      <!-- <h1 class="logo me-auto"><a href="Home">CoreTech-Mena<span>.</span></a></h1> -->
+      <!-- <h1 class="logo me-auto"><a href="Home">CoreTech-MENA<span>.</span></a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
       <a href="Home" class="logo me-auto"><img src="assets/img/CoreTech-Mena - Logo.png" alt="Company-Logo"></a>
 
@@ -290,7 +290,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
                   <i class="bi bi-people-fill"></i>
                   <h4>Team</h4>
-                  <p style="text-align: justify;">When We Think Of CoreTech-Mena And The Path We’ve Built, We Owe Our
+                  <p style="text-align: justify;">When We Think Of CoreTech-MENA And The Path We’ve Built, We Owe Our
                     Success To Our Employees Which
                     Have Grown Alongside Us And Have Become The Outstanding Professionals We Know And Love Today. We Are
                     Proud Of The Passion And Commitment They Show And They Are What Truly Makes Us ROCK SOLID SOUL
@@ -402,7 +402,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                 <h3>Revolutionizing Digital Landscapes: Full-Stack Development Expertise
                 </h3>
                 <p style="text-align: justify;">
-                  At CoreTech-Mena, We Redefine Digital Landscapes With Comprehensive Full-Stack Development Solutions.
+                  At CoreTech-MENA, We Redefine Digital Landscapes With Comprehensive Full-Stack Development Solutions.
                   Our Expertise Spans Front-End and Back-End Technologies, Enabling Seamless Integration and Optimal
                   Performance Across All Layers of Your Application
                 </p>
@@ -419,7 +419,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                     Entire Development Lifecycle</li>
                 </ul>
                 <p style="text-align: justify;">
-                  Partner With CoreTech-Mena To Harness The Power of Full-Stack Development and Elevate Your Digital
+                  Partner With CoreTech-MENA To Harness The Power of Full-Stack Development and Elevate Your Digital
                   Presence. Experience The Benefits of Our Holistic Approach, Seamless Integration, and End-To-End
                   Solutions, As We Work Together To Revolutionize Your Digital Landscape
                 </p>
@@ -434,7 +434,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                 <h3>Elevating Efficiency: Tailored Database Management Solutions</h3>
                 <p style="text-align: justify;">
-                  At CoreTech-Mena, We Redefine DataBase Management With Tailored Solutions. Seamlessly Integrating
+                  At CoreTech-MENA, We Redefine DataBase Management With Tailored Solutions. Seamlessly Integrating
                   DataBases, Our Solutions Optimize Operations, Enhance Data Accessibility, Security, and Reliability,
                   Fostering Unparalleled Innovation and Growth
                 </p>
@@ -451,7 +451,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                     Assistance, Ensuring Data Evolves With Your Business Needs</li>
                 </ul>
                 <p style="text-align: justify;">
-                  Partner With CoreTech-Mena To Experience Tailored DataBase Solutions, Seamless Integration, and
+                  Partner With CoreTech-MENA To Experience Tailored DataBase Solutions, Seamless Integration, and
                   Personalized Support, Driving Your Business Forward in The Data-Centric Era
                 </p>
               </div>
@@ -465,7 +465,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                 <h3>Pioneering Connectivity: Tailored Mobile Development Solutions</h3>
                 <p style="text-align: justify;">
-                  At CoreTech-Mena, We Redefine Digital Landscapes With Bespoke Mobile Development Services. Seamlessly
+                  At CoreTech-MENA, We Redefine Digital Landscapes With Bespoke Mobile Development Services. Seamlessly
                   Connecting Businesses and Users, our Solutions Optimize Operations, Elevate Accessibility, Efficiency,
                   and User Experiences, Fostering Unparalleled Innovation and Growth
                 </p>
@@ -482,7 +482,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                     Assistance, Fostering Long-Term Success</li>
                 </ul>
                 <p style="text-align: justify;">
-                  Partner With CoreTech-Mena To Embark on a Journey of Digital Transformation. Experience The
+                  Partner With CoreTech-MENA To Embark on a Journey of Digital Transformation. Experience The
                   Difference With Our Tailored Solutions, Unparalleled Integration, and Personalized Support, Driving
                   Your Business To New Heights in The Mobile-First Era
                 </p>
@@ -497,7 +497,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                 <h3>Innovating Connectivity: AI Department's Tailored Solutions</h3>
                 <p style="text-align: justify;">
-                  At CoreTech-Mena, Our AI Department Redefines Digital Landscapes With Tailored Solutions. Seamlessly
+                  At CoreTech-MENA, Our AI Department Redefines Digital Landscapes With Tailored Solutions. Seamlessly
                   Connecting Businesses and Users, Our AI-Driven Innovations Optimize Operations, Elevate Accessibility,
                   Efficiency, and User Experiences, Fostering Unparalleled Innovation and Growth
                 </p>
@@ -511,7 +511,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                     Specifically For Your Business Needs, Maximizing Efficiency</li>
                 </ul>
                 <p style="text-align: justify;">
-                  Partner With CoreTech-Mena AI Department To Experience Tailored AI Solutions, Seamless Integration,
+                  Partner With CoreTech-MENA AI Department To Experience Tailored AI Solutions, Seamless Integration,
                   and Personalized Support, Driving Your Business Forward in The Era of AI-Driven Innovation
                 </p>
               </div>
