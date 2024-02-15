@@ -1,3 +1,124 @@
+<?php
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Check if form fields are set for the Meeting form
+    if (isset($_POST['cname']) && isset($_POST['cemail']) && isset($_POST['msubject']) && isset($_POST['startDate'])) {
+        // Get form data for the Meeting form
+        $cname = $_POST['cname'];
+        $cemail = $_POST['cemail'];
+        $msubject = "CoreTech-MENA - " . $_POST['msubject'];
+        $startDate = $_POST['startDate'];
+
+        // Email recipient for the Meeting form
+        $to = "abd.alrahman.olabi@gmail.com";
+
+        // Email headers for the Meeting form
+        $headers = "From: $cname <$cemail>\r\n";
+        $headers .= "Reply-To: $cemail\r\n";
+        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+        // Email content for the Meeting form
+        $email_content = "<p><strong>Company Name:</strong> $cname</p>";
+        $email_content .= "<p><strong>Company Email:</strong> $cemail</p>";
+        $email_content .= "<p><strong>Meeting Subject:</strong> $msubject</p>";
+        $email_content .= "<p><strong>Meeting Date:</strong> $startDate</p>";
+
+        // Send email for the Meeting form
+        if (mail($to, $msubject, $email_content, $headers)) {
+            // If mail sent successfully for the Meeting form
+            echo "<script>
+                    alert('Your Meeting Has Been Scheduled Successfully.');
+                  </script>";
+        } else {
+            // If mail sending failed for the Meeting form
+            echo "<script>
+                    alert('Failed To Schedule Your Meeting. Please Try Again Later.');
+                  </script>";
+        }
+    } elseif (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])) {
+        // Get form data for the Contact form
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $subject = "CoreTech-MENA - " . $_POST['subject'];
+        $message = $_POST['message'];
+
+        // Email recipient for the Contact form
+        $to = "abd.alrahman.olabi@gmail.com";
+
+        // Email headers for the Contact form
+        $headers = "From: $name <$email>\r\n";
+        $headers .= "Reply-To: $email\r\n";
+        $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+
+        // Email content for the Contact form
+        $email_content = "<p><strong>Name:</strong> $name</p>";
+        $email_content .= "<p><strong>Email:</strong> $email</p>";
+        $email_content .= "<p><strong>Subject:</strong> $subject</p>";
+        $email_content .= "<p><strong>Message:</strong> $message</p>";
+
+        // Send email for the Contact form
+        if (mail($to, $subject, $email_content, $headers)) {
+            // If mail sent successfully for the Contact form
+            echo "<script>alert('Your Message Has Been Sent Successfully.');</script>";
+        } else {
+            // If mail sending failed for the Contact form
+            echo "<script>alert('Failed To Send Your Message. Please Try Again Later.');</script>";
+        }
+    } 
+}
+
+// Check if the form for CV submission is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
+    // Set recipient email address for CV submission
+    $to = "abd.alrahman.olabi@gmail.com";
+
+    // Set sender email address for CV submission
+    $from = "abd.alrahman.olabi@gmail.com"; 
+
+    // Email subject for CV submission
+    $subject = "CoreTech-MENA - CV Submission";
+
+    // Initial message body for CV submission
+    $message = "A CV has been submitted.\n";
+
+    // Get file details for CV submission
+    $file = $_FILES["cv"]["tmp_name"];
+    $filename = $_FILES["cv"]["name"];
+    $filetype = $_FILES["cv"]["type"];
+
+    // Check if file is not empty for CV submission
+    if (!empty($file)) {
+        // Prepare email headers for CV submission
+        $headers = "From: $from" . "\r\n";
+        $headers .= "Reply-To: $from" . "\r\n";
+        $headers .= "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-Type: multipart/mixed; boundary=\"boundary\"" . "\r\n";
+
+        // Encode file attachment for CV submission
+        $attachment = chunk_split(base64_encode(file_get_contents($file)));
+
+        // Construct message with file attachment for CV submission
+        $message .= "--boundary\r\n";
+        $message .= "Content-Type: $filetype; name=\"$filename\"\r\n";
+        $message .= "Content-Disposition: attachment; filename=\"$filename\"\r\n";
+        $message .= "Content-Transfer-Encoding: base64\r\n\r\n";
+        $message .= $attachment . "\r\n";
+        $message .= "--boundary--";
+
+        // Attempt to send email for CV submission
+        if (mail($to, $subject, $message, $headers)) {
+            echo "<script>alert('Your CV Has Been Sent Successfully.'); </script>";
+        } else {
+            echo "<script>alert('Failed To Send Your CV. Please Try Again Later.');</script>";
+        }
+    } else {
+        echo "<script>alert('No File Uploaded.');</script>";
+    }
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -932,7 +1053,7 @@
         <div class="row" data-aos="fade-up" data-aos-delay="100">
 
           <div class="col-lg-12">
-            <form action="meeting.php" method="post" role="form" class="php-email-form">
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col form-group">
                   <input type="text" name="cname" class="form-control" id="name" placeholder="Company Name" required>
@@ -947,7 +1068,7 @@
                   required>
               </div>
               <div class="form-group">
-                <input name="startDate" id="startDate" class="form-control" type="date" />
+                <input name="startDate" id="startDate" class="form-control" type="date" placeholder="Meeting Suggested Date" required/>
               </div>
               <div class="text-center"><button type="submit">Schedule Meeting</button></div>
             </form>
@@ -956,7 +1077,7 @@
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section><!-- End Meeting Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact" style="padding: 0;">
@@ -999,7 +1120,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="contact.php" method="post" role="form" class="php-email-form">
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -1073,7 +1194,7 @@
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Team</h4>
             <p>Send Us Your CV! We Will Contact You When There’s An Opening!</p>
-            <form id="joinForm" action="Cv_form.php" method="post" enctype="multipart/form-data"
+            <form id="joinForm" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data"
               onsubmit="submitForm()">
               <div class="input-group">
                 <div class="custom-file">
