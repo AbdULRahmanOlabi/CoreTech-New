@@ -125,15 +125,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>CoreTech-MENA - HomePage</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta
+    content="Discover How CoreTeh-MENA Revolutionizes Businesses With Comprehensive Technology Solutions, Empowering Organizations To Thrive in The Digital Age. We Offer Tailored Services, Leveraging Innovation and Expertise To Drive Efficiency and Growth. Partner With Us For a Competitive Edge and Experience Our Trusted IT Solutions."
+    name="description">
+
+  <meta
+    content="CoreTech-MENA, Core, Tech, MENA, IT, solutions, information technology, software engineering, software development, digital experience maturity, IT outsourcing, data management, AI development, machine learning, deep learning, enterprise architecture, data analysis, data mining, mobile, mobile development, IoT solutions, digital innovation, IT strategy, IT infrastructure, IT consulting services, tech support, IT project management, IT implementation, IT architecture, IT maintenance, IT training, IT education, SMS, school, management, LMS, learning, management, system, moodle"
+    name="keywords">
+
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
 
 
@@ -171,7 +179,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <li class="dropdown"><a href="#"><i class="bi bi-translate"></i></a>
             <ul>
               <li><a href="#"><iconify-icon icon="emojione-v1:flag-for-united-states"></iconify-icon>English</a></li>
-              <li><a href="Home-AR"><iconify-icon icon="emojione-v1:flag-for-united-arab-emirates"></iconify-icon>العربية</a>
+              <li><a href="Home-AR"><iconify-icon
+                    icon="emojione-v1:flag-for-united-arab-emirates"></iconify-icon>العربية</a>
               </li>
             </ul>
           </li>
@@ -204,51 +213,84 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
 
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/CompTechCo - Logo.png" class="img-fluid" alt="CompTechCo - Logo">
+            <div class="swiper-slide"><img src="assets/img/clients/CompTechCo - Logo.png" class="img-fluid"
+                alt="CompTechCo - Logo">
             </div>
-            <div class="swiper-slide"><img src="assets/img/clients/Business Secrets - Logo.png" class="img-fluid" alt="Business Secrets - Logo">
+            <div class="swiper-slide"><img src="assets/img/clients/Business Secrets - Logo.png" class="img-fluid"
+                alt="Business Secrets - Logo">
             </div>
-            <div class="swiper-slide"><img src="assets/img/clients/Bearing World - Logo.png" class="img-fluid" alt="Bearing World - Logo">
+            <div class="swiper-slide"><img src="assets/img/clients/Bearing World - Logo.png" class="img-fluid"
+                alt="Bearing World - Logo">
             </div>
             <div class="swiper-slide"><img src="assets/img/clients/ISB - Logo.png" class="img-fluid" alt="ISB - Logo">
             </div>
-            <div class="swiper-slide"><img src="assets/img/clients/Client1 - Logo.png" class="img-fluid" alt="Client1 - Logo">
+            <div class="swiper-slide"><img src="assets/img/clients/Client1 - Logo.png" class="img-fluid"
+                alt="Client1 - Logo">
             </div>
-            <div class="swiper-slide"><img src="assets/img/clients/Client2 - Logo.png" class="img-fluid" alt="Client2 - Logo">
+            <div class="swiper-slide"><img src="assets/img/clients/Client2 - Logo.png" class="img-fluid"
+                alt="Client2 - Logo">
             </div>
-            <div class="swiper-slide"><img src="assets/img/clients/Client3 - Logo.png" class="img-fluid" alt="Client3 - Logo">
+            <div class="swiper-slide"><img src="assets/img/clients/Client3 - Logo.png" class="img-fluid"
+                alt="Client3 - Logo">
             </div>
-            <div class="swiper-slide"><img src="assets/img/clients/Client4 - Logo.png" class="img-fluid" alt="Client4 - Logo">
+            <div class="swiper-slide"><img src="assets/img/clients/Client4 - Logo.png" class="img-fluid"
+                alt="Client4 - Logo">
             </div>
-            <div class="swiper-slide"><img src="assets/img/clients/Client5 - Logo.png" class="img-fluid" alt="Client5 - Logo">
+            <div class="swiper-slide"><img src="assets/img/clients/Client5 - Logo.png" class="img-fluid"
+                alt="Client5 - Logo">
             </div>
             <div class="swiper-slide"><img src="assets/img/clients/OBAA - Logo.png" class="img-fluid" alt="OBAA - Logo">
             </div>
-            <div class="swiper-slide"><img src="assets/img/clients/Future - Logo.png" class="img-fluid" alt="Future - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/AL-Farabi - Logo.png" class="img-fluid" alt="AL-Farabi - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Tafawki - Logo.png" class="img-fluid" alt="Tafawki - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/AL-Hekma - Logo.png" class="img-fluid" alt="AL-Hekma - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Resaleh - Logo.png" class="img-fluid" alt="Resaleh - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Manaret-Al-Majd - Logo.png" class="img-fluid" alt="Manaret Al-Majd - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Star - Logo.png" class="img-fluid" alt="Syrian Star - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Mansour - Logo.png" class="img-fluid" alt="Mansour - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Hadara - Logo.png" class="img-fluid" alt="Hadara - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Massar - Logo.png" class="img-fluid" alt="Massar - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Al-Abjadiya - Logo.png" class="img-fluid" alt="Al-Abjadiya - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Community - Logo.png" class="img-fluid" alt="Syrian Community - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Promies - Logo.png" class="img-fluid" alt="Promies - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Yarmouk - Logo.png" class="img-fluid" alt="Yarmouk - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Al-Ola - Logo.png" class="img-fluid" alt="Al-Ola - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Manara-International - Logo.png" class="img-fluid" alt="Manara International - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Flowers - Logo.png" class="img-fluid" alt="Syrian Flowers - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Binaa - Logo.png" class="img-fluid" alt="Binaa - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/BinaaPy - Logo.png" class="img-fluid" alt="BinaaPy - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Orchid - Logo.png" class="img-fluid" alt="Orchid - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Aleppo - Logo.png" class="img-fluid" alt="Aleppo - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Sama-Al-Shahbaa - Logo.png" class="img-fluid" alt="Sama Al-Shahbaa - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/DIVS - Logo.png" class="img-fluid" alt="DIVS School - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Oasis-Online-School - Logo.png" class="img-fluid" alt="Syrian Oasis Online School"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/AlFajr - Logo.png" class="img-fluid" alt="AlFajr - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Future - Logo.png" class="img-fluid"
+                alt="Future - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/AL-Farabi - Logo.png" class="img-fluid"
+                alt="AL-Farabi - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Tafawki - Logo.png" class="img-fluid"
+                alt="Tafawki - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/AL-Hekma - Logo.png" class="img-fluid"
+                alt="AL-Hekma - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Resaleh - Logo.png" class="img-fluid"
+                alt="Resaleh - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Manaret-Al-Majd - Logo.png" class="img-fluid"
+                alt="Manaret Al-Majd - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Star - Logo.png" class="img-fluid"
+                alt="Syrian Star - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Mansour - Logo.png" class="img-fluid"
+                alt="Mansour - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Hadara - Logo.png" class="img-fluid"
+                alt="Hadara - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Massar - Logo.png" class="img-fluid"
+                alt="Massar - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Al-Abjadiya - Logo.png" class="img-fluid"
+                alt="Al-Abjadiya - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Community - Logo.png" class="img-fluid"
+                alt="Syrian Community - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Promies - Logo.png" class="img-fluid"
+                alt="Promies - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Yarmouk - Logo.png" class="img-fluid"
+                alt="Yarmouk - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Al-Ola - Logo.png" class="img-fluid"
+                alt="Al-Ola - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Manara-International - Logo.png" class="img-fluid"
+                alt="Manara International - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Flowers - Logo.png" class="img-fluid"
+                alt="Syrian Flowers - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Binaa - Logo.png" class="img-fluid"
+                alt="Binaa - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/BinaaPy - Logo.png" class="img-fluid"
+                alt="BinaaPy - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Orchid - Logo.png" class="img-fluid"
+                alt="Orchid - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Aleppo - Logo.png" class="img-fluid"
+                alt="Aleppo - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Sama-Al-Shahbaa - Logo.png" class="img-fluid"
+                alt="Sama Al-Shahbaa - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/DIVS - Logo.png" class="img-fluid"
+                alt="DIVS School - Logo"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Oasis-Online-School - Logo.png"
+                class="img-fluid" alt="Syrian Oasis Online School"></div>
+            <div class="swiper-slide"><img src="assets/img/clients/AlFajr - Logo.png" class="img-fluid"
+                alt="AlFajr - Logo"></div>
             <div class="swiper-slide"><img src="assets/img/clients/SVS - Logo.png" class="img-fluid" alt="SVS-Logo">
             </div>
           </div>
@@ -333,7 +375,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-3 col-md-6">
             <div class="count-box">
               <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="95" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p>Happy Clients</p>
             </div>
           </div>
@@ -341,7 +384,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div class="count-box">
               <i class="bi bi-pass"></i>
-              <span data-purecounter-start="0" data-purecounter-end="202" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="202" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p>Projects</p>
             </div>
           </div>
@@ -349,7 +393,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
               <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p>Hours Of Support</p>
             </div>
           </div>
@@ -357,7 +402,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
               <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="16" data-purecounter-duration="1" class="purecounter"></span>
+              <span data-purecounter-start="0" data-purecounter-end="16" data-purecounter-duration="1"
+                class="purecounter"></span>
               <p>Hard Workers</p>
             </div>
           </div>
@@ -374,7 +420,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-              <i class=""><iconify-icon icon="carbon:ibm-open-enterprise-languages" width="1.2em" height="1.2em"></iconify-icon></i>
+              <i class=""><iconify-icon icon="carbon:ibm-open-enterprise-languages" width="1.2em"
+                  height="1.2em"></iconify-icon></i>
               <h4 class="d-none d-lg-block">Full-Stack Development</h4>
             </a>
           </li>
@@ -386,7 +433,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           </li>
           <li class="nav-item col-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-              <i class=""><iconify-icon icon="mdi:mobile-phone-settings-variant" width="1.2em" height="1.2em"></iconify-icon></i>
+              <i class=""><iconify-icon icon="mdi:mobile-phone-settings-variant" width="1.2em"
+                  height="1.2em"></iconify-icon></i>
               <h4 class="d-none d-lg-block">Mobile Developments</h4>
             </a>
           </li>
@@ -1027,14 +1075,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                   <input type="text" name="cname" class="form-control" id="name" placeholder="Company Name" required>
                 </div>
                 <div class="col form-group">
-                  <input type="email" class="form-control" name="cemail" id="email" placeholder="Company Email" required>
+                  <input type="email" class="form-control" name="cemail" id="email" placeholder="Company Email"
+                    required>
                 </div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="msubject" id="subject" placeholder="Meeting Subject" required>
+                <input type="text" class="form-control" name="msubject" id="subject" placeholder="Meeting Subject"
+                  required>
               </div>
               <div class="form-group">
-                <input name="startDate" id="startDate" class="form-control" type="date" placeholder="Meeting Suggested Date" required />
+                <input name="startDate" id="startDate" class="form-control" type="date"
+                  placeholder="Meeting Suggested Date" required />
               </div>
               <div class="text-center"><button type="submit">Schedule Meeting</button></div>
             </form>
@@ -1106,7 +1157,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
             </form>
           </div>
 
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.327393651882!2d36.291533475492635!3d33.518872573362515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518e77918a57e61%3A0x9b06adbeca3cc528!2sCoreTech-Mena!5e0!3m2!1sen!2sde!4v1707744452520!5m2!1sen!2sde" width="600" height="450" style="border:0; padding-top:10px !important; border-radius:5px !important;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.327393651882!2d36.291533475492635!3d33.518872573362515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518e77918a57e61%3A0x9b06adbeca3cc528!2sCoreTech-Mena!5e0!3m2!1sen!2sde!4v1707744452520!5m2!1sen!2sde"
+            width="600" height="450" style="border:0; padding-top:10px !important; border-radius:5px !important;"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
 
@@ -1158,10 +1212,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Our Team</h4>
             <p>Send Us Your CV! We Will Contact You ASAP..</p>
-            <form id="joinForm" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data" onsubmit="submitForm()">
+            <form id="joinForm" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data"
+              onsubmit="submitForm()">
               <div class="input-group">
                 <div class="custom-file">
-                  <input class="form-control custom-file-label" accept=".pdf,.doc,.docx" type="file" name="cv" id="cv" onchange="updateFileName(this)">
+                  <input class="form-control custom-file-label" accept=".pdf,.doc,.docx" type="file" name="cv" id="cv"
+                    onchange="updateFileName(this)">
                 </div>
               </div>
               <input id="joinBtn" type="submit" value="Join Us">
@@ -1193,7 +1249,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <div id="preloader"></div>
 
