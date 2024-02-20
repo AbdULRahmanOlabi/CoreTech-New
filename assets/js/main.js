@@ -164,7 +164,7 @@
       }
     }
   });
-  document.addEventListener("DOMContentLoaded", function() {
+  document.addEventListener("DOMContentLoaded", function () {
     // Initialize Swiper
     var swiper = new Swiper(".clients-slider", {
       speed: 400,
@@ -197,20 +197,23 @@
         },
       },
     });
-  
+
     // Add click event listener to next button
-    document.querySelector(".swiper-button-next").addEventListener("click", function(event) {
-      // Go to the next slide
-      swiper.slideNext();
-    });
-  
+    document
+      .querySelector(".swiper-button-next")
+      .addEventListener("click", function (event) {
+        // Go to the next slide
+        swiper.slideNext();
+      });
+
     // Add click event listener to previous button
-    document.querySelector(".swiper-button-prev").addEventListener("click", function(event) {
-      // Go to the previous slide
-      swiper.slidePrev();
-    });
+    document
+      .querySelector(".swiper-button-prev")
+      .addEventListener("click", function (event) {
+        // Go to the previous slide
+        swiper.slidePrev();
+      });
   });
-  
 
   /**
    * Porfolio isotope and filter
@@ -354,6 +357,16 @@ function submitForm() {
   var joinBtn = document.getElementById("joinBtn");
   joinBtn.disabled = true;
   joinBtn.value = "Sending...";
+
+  // Submit the form
+  document.getElementById("joinForm").submit();
+}
+
+function submitForm() {
+  // Disable the button and change its text
+  var joinBtn = document.getElementById("joinBtn-AR");
+  joinBtn.disabled = true;
+  joinBtn.value = "إرسال...";
 
   // Submit the form
   document.getElementById("joinForm").submit();

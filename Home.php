@@ -1,121 +1,146 @@
 <?php
-// Check if form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Check if form fields are set for the Meeting form
-  if (isset($_POST['cname']) && isset($_POST['cemail']) && isset($_POST['msubject']) && isset($_POST['startDate'])) {
-    // Get form data for the Meeting form
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+require 'PHPMailer/src/Exception.php';
+
+// Check if Form is Submitted For The Meeting Form
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['cname']) && isset($_POST['cemail']) && isset($_POST['msubject']) && isset($_POST['startDate'])) {
+  // Create a New PHPMailer Instance
+  $mail = new PHPMailer(true); // Passing `true` Enables Exceptions
+
+  try {
+    //Server Settings
+    $mail->isSMTP(); // Set Mailer To Use SMTP
+    $mail->Host = 'smtp.privateemail.com'; // Namecheap SMTP Server
+    $mail->SMTPAuth = true; // Enable SMTP Authentication
+    $mail->Username = 'info@coretech-mena.com'; // SMTP Username
+    $mail->Password = 'InFOC0rETeChM@iL'; // SMTP Password
+    $mail->SMTPSecure = 'tls'; // Enable TLS Encryption, `ssl` Also Accepted
+    $mail->Port = 587; // TCP Port To Connect
+
+    // Get Form Data For The Meeting Form
     $cname = $_POST['cname'];
     $cemail = $_POST['cemail'];
     $msubject = "CoreTech-MENA - " . $_POST['msubject'];
     $startDate = $_POST['startDate'];
 
-    // Email recipient for the Meeting form
-    $to = "abd.alrahman.olabi@gmail.com";
+    //Recipients
+    $mail->setFrom('info@coretech-mena.com', $cname);
+    $mail->addAddress('info@coretech-mena.com'); // Add a Recipient
 
-    // Email headers for the Meeting form
-    $headers = "From: $cname <$cemail>\r\n";
-    $headers .= "Reply-To: $cemail\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-
-    // Email content for the Meeting form
+    // Content
+    $mail->isHTML(true); // Set Email Format To HTML
+    $mail->Subject = $msubject;
     $email_content = "<p><strong>Company Name:</strong> $cname</p>";
     $email_content .= "<p><strong>Company Email:</strong> $cemail</p>";
     $email_content .= "<p><strong>Meeting Subject:</strong> $msubject</p>";
     $email_content .= "<p><strong>Meeting Date:</strong> $startDate</p>";
+    $mail->Body = $email_content;
 
-    // Send email for the Meeting form
-    if (mail($to, $msubject, $email_content, $headers)) {
-      // If mail sent successfully for the Meeting form
-      echo "<script>
-                    alert('Thanks For Your Contact, We Will Contact You Soon To Schedule The Meeting');
-                  </script>";
-    } else {
-      // If mail sending failed for the Meeting form
-      echo "<script>
-                    alert('Failed To Schedule Your Meeting. Please Try Again Later.');
-                  </script>";
-    }
-  } elseif (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])) {
-    // Get form data for the Contact form
+    // Attempt To Send Email
+    $mail->send();
+    echo "<script>alert('Thanks For Your Scheduling, We Will Contact You Soon.');</script>";
+  } catch (Exception $e) {
+    echo "<script>alert('Failed To Schedule Your Meeting. Please Try Again Later.');</script>";
+  }
+}
+
+// Check if Form is Submitted For The Contact Form
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message'])) {
+  // Create a New PHPMailer Instance
+  $mail = new PHPMailer(true); // Passing `true` Enables Exceptions
+
+  try {
+    //Server Settings
+    $mail->isSMTP(); // Set Mailer To Use SMTP
+    $mail->Host = 'smtp.privateemail.com'; // Namecheap SMTP Server
+    $mail->SMTPAuth = true; // Enable SMTP Authentication
+    $mail->Username = 'info@coretech-mena.com'; // SMTP Username
+    $mail->Password = 'InFOC0rETeChM@iL'; // SMTP Password
+    $mail->SMTPSecure = 'tls'; // Enable TLS Encryption, `ssl` Also Accepted
+    $mail->Port = 587; // TCP Port To Connect
+
+    // Get Form Data For The Contact Form
     $name = $_POST['name'];
     $email = $_POST['email'];
     $subject = "CoreTech-MENA - " . $_POST['subject'];
     $message = $_POST['message'];
 
-    // Email recipient for the Contact form
-    $to = "abd.alrahman.olabi@gmail.com";
+    //Recipients
+    $mail->setFrom('info@coretech-mena.com', $name);
+    $mail->addAddress('info@coretech-mena.com'); // Add a Recipient
 
-    // Email headers for the Contact form
-    $headers = "From: $name <$email>\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
-
-    // Email content for the Contact form
+    // Content
+    $mail->isHTML(true); // Set Email Format To HTML
+    $mail->Subject = $subject;
     $email_content = "<p><strong>Name:</strong> $name</p>";
     $email_content .= "<p><strong>Email:</strong> $email</p>";
     $email_content .= "<p><strong>Subject:</strong> $subject</p>";
     $email_content .= "<p><strong>Message:</strong> $message</p>";
+    $mail->Body = $email_content;
 
-    // Send email for the Contact form
-    if (mail($to, $subject, $email_content, $headers)) {
-      // If mail sent successfully for the Contact form
-      echo "<script>alert('Thanks For Your Contact, Your Message Has Been Sent Successfully.');</script>";
-    } else {
-      // If mail sending failed for the Contact form
-      echo "<script>alert('Failed To Send Your Message. Please Try Again Later.');</script>";
-    }
+    // Attempt To Send Email
+    $mail->send();
+    echo "<script>alert('Thanks For Your Contact, Your Message Has Been Sent Successfully.');</script>";
+  } catch (Exception $e) {
+    echo "<script>alert('Failed To Send Your Message. Please Try Again Later.');</script>";
   }
 }
 
-// Check if the form for CV submission is submitted
+// Check if The Form For CV Submission is Submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
-  // Set recipient email address for CV submission
-  $to = "abd.alrahman.olabi@gmail.com";
+  // Create a New PHPMailer Instance
+  $mail = new PHPMailer(true); // Passing `true` Enables Exceptions
 
-  // Set sender email address for CV submission
-  $from = "abd.alrahman.olabi@gmail.com";
+  try {
+    //Server Settings
+    $mail->isSMTP(); // Set Mailer To Use SMTP
+    $mail->Host = 'smtp.privateemail.com'; // Namecheap SMTP Server
+    $mail->SMTPAuth = true; // Enable SMTP Authentication
+    $mail->Username = 'info@coretech-mena.com'; // SMTP Username
+    $mail->Password = 'InFOC0rETeChM@iL'; // SMTP Password
+    $mail->SMTPSecure = 'tls'; // Enable TLS Encryption, `ssl` Also Accepted
+    $mail->Port = 587; // TCP Port To Connect
 
-  // Email subject for CV submission
-  $subject = "CoreTech-MENA - CV Submission";
+    // Set Recipient Email Address For CV Submission
+    $to = "info@coretech-mena.com";
 
-  // Initial message body for CV submission
-  $message = "A CV has been submitted.\n";
+    // Set Sender Email Address For CV Submission
+    $from = "info@coretech-mena.com";
 
-  // Get file details for CV submission
-  $file = $_FILES["cv"]["tmp_name"];
-  $filename = $_FILES["cv"]["name"];
-  $filetype = $_FILES["cv"]["type"];
+    // Email Subject For CV Submission
+    $subject = "CoreTech-MENA - CV Submission";
 
-  // Check if file is not empty for CV submission
-  if (!empty($file)) {
-    // Prepare email headers for CV submission
-    $headers = "From: $from" . "\r\n";
-    $headers .= "Reply-To: $from" . "\r\n";
-    $headers .= "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-Type: multipart/mixed; boundary=\"boundary\"" . "\r\n";
+    // Get File Details For CV Submission
+    $file = $_FILES["cv"]["tmp_name"];
+    $filename = $_FILES["cv"]["name"];
+    $filetype = $_FILES["cv"]["type"];
 
-    // Encode file attachment for CV submission
-    $attachment = chunk_split(base64_encode(file_get_contents($file)));
+    // Prepare Email Headers For CV Submission
+    $mail->setFrom($from);
+    $mail->addAddress($to); // Add a Recipient
 
-    // Construct message with file attachment for CV submission
-    $message .= "--boundary\r\n";
-    $message .= "Content-Type: $filetype; name=\"$filename\"\r\n";
-    $message .= "Content-Disposition: attachment; filename=\"$filename\"\r\n";
-    $message .= "Content-Transfer-Encoding: base64\r\n\r\n";
-    $message .= $attachment . "\r\n";
-    $message .= "--boundary--";
+    // Content
+    $mail->isHTML(true); // Set Email Format To HTML
+    $mail->Subject = $subject;
+    $mail->Body = "A CV has been submitted.\n";
 
-    // Attempt to send email for CV submission
-    if (mail($to, $subject, $message, $headers)) {
-      echo "<script>alert('Your CV Has Been Sent Successfully.'); </script>";
-    } else {
-      echo "<script>alert('Failed To Send Your CV. Please Try Again Later.');</script>";
-    }
-  } else {
-    echo "<script>alert('No File Uploaded.');</script>";
+    // Attach File For CV Submission
+    $mail->addAttachment($file, $filename);
+
+    // Attempt To Send Email For CV Submission
+    $mail->send();
+    echo "<script>alert('Your CV Has Been Sent Successfully.');</script>";
+  } catch (Exception $e) {
+    echo "<script>alert('Failed To Send Your CV. Please Try Again Later.');</script>";
   }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -143,6 +168,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cairo">
+
+  <!-- FontAwesome -->
+  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" />
 
 
   <!-- Vendor CSS Files -->
@@ -179,7 +207,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <li class="dropdown"><a href="#"><i class="bi bi-translate"></i></a>
             <ul>
               <li><a href="#"><iconify-icon icon="emojione-v1:flag-for-united-states"></iconify-icon>English</a></li>
-              <li><a href="Home-AR"><iconify-icon
+              <li><a href="AR/Home"><iconify-icon
                     icon="emojione-v1:flag-for-united-arab-emirates"></iconify-icon>العربية</a>
               </li>
             </ul>
@@ -202,7 +230,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
       </video>
     </div>
 
-
   </section><!-- End Hero -->
 
   <main id="main">
@@ -213,6 +240,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
 
         <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="assets/img/clients/ABS - Logo.png" class="img-fluid" alt="ABS - Logo">
+            </div>
             <div class="swiper-slide"><img src="assets/img/clients/CompTechCo - Logo.png" class="img-fluid"
                 alt="CompTechCo - Logo">
             </div>
@@ -328,7 +357,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                   <h4>Who we are</h4>
                   <p style="text-align: justify;">We Are a Web Development Company Founded in 2021 By Wasim Chihadeh and
                     Talal Shihabi. Our
-                    Company’s Focus is To Deliver Web and Mobile Applications Using The Robustness of Facebook Stack
+                    Company’s Focus is To Deliver Web and Mobile Applications
                     With Technologies Such as .Net Core, MongoDB, Angular, and Typescript. As a Result, our
                     User‑Centric IT Solutions are Fast, Scalable, Robust, and Run Seamlessly in Every Environment</p>
                 </div>
@@ -1083,9 +1112,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                 <input type="text" class="form-control" name="msubject" id="subject" placeholder="Meeting Subject"
                   required>
               </div>
-              <div class="form-group">
-                <input name="startDate" id="startDate" class="form-control" type="date"
-                  placeholder="Meeting Suggested Date" required />
+              <div class="form-group date-input-container">
+                <input name="startDate" id="startDate" class="form-control" type="date" required />
               </div>
               <div class="text-center"><button type="submit">Schedule Meeting</button></div>
             </form>
@@ -1097,7 +1125,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
     </section><!-- End Meeting Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact" style="padding: 0;">
+    <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -1115,7 +1143,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                 <div class="info-box">
                   <i class="bx bx-map"></i>
                   <h3>Our Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p>Compass Building,
+                    Al Shohada Road,
+                    AL Hamra Industrial Zone-FZ,<br>
+                    Ras Al Khaimah, United Arab Emirates</p>
                 </div>
               </div>
               <div class="col-md-6">
@@ -1151,17 +1182,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
           </div>
 
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.327393651882!2d36.291533475492635!3d33.518872573362515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1518e77918a57e61%3A0x9b06adbeca3cc528!2sCoreTech-Mena!5e0!3m2!1sen!2sde!4v1707744452520!5m2!1sen!2sde"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d899.0447354540795!2d55.78556386955713!3d25.66536229858831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef60b0059d3a40d%3A0x26c11e56db834c61!2sCoreTech-MENA!5e0!3m2!1sen!2s!4v1708439300133!5m2!1sen!2s"
             width="600" height="450" style="border:0; padding-top:10px !important; border-radius:5px !important;"
             allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
         </div>
 
       </div>
@@ -1179,9 +1209,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>CoreTech-MENA<span>.</span></h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
+              Compass Building <br>
+              Al Shohada Road <br>
+              AL Hamra Industrial Zone-FZ <br>
+              Ras Al Khaimah - United Arab Emirates <br>
               <strong>Phone:</strong> <a href="tel:00971561212043">+971 561212043</a><br>
               <strong>Email:</strong> <a href="mailto:info@CoreTech-MENA.com">Info@CoreTech-MENA.com</a><br>
             </p>
