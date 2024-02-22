@@ -362,7 +362,7 @@ function submitForm() {
   document.getElementById("joinForm").submit();
 }
 
-function submitForm() {
+function submitFormAR() {
   // Disable the button and change its text
   var joinBtn = document.getElementById("joinBtn-AR");
   joinBtn.disabled = true;
