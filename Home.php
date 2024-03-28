@@ -147,7 +147,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!-- <meta content="width=device-width, initial-scale=1.0" name="viewport"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
   <title>CoreTech-MENA - HomePage</title>
   <meta
@@ -224,7 +226,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
   <section id="hero" class="d-flex align-items-center">
 
     <div id="hero">
-      <video autoplay muted>
+      <video autoplay muted playsinline width="100%" height="auto">
         <source src="assets/img/CoreTech-Mena.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -355,10 +357,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                   <i class="bx bx-receipt"></i>
                   <h4>Who we are</h4>
-                  <p style="text-align: justify;">We Are a Web Development Company Founded in 2021 By Wasim Chihadeh and
+                  <p style="text-align: justify;">We Are a Software Development Company Relaunched in 2021 By Wasim Chihadeh and
                     Talal Shihabi. Our
                     Company’s Focus is To Deliver Web and Mobile Applications
-                    With Technologies Such as .Net Core, MongoDB, Angular, and Typescript. As a Result, our
+                    With Latest Technologies. As a Result, our
                     User‑Centric IT Solutions are Fast, Scalable, Robust, and Run Seamlessly in Every Environment</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
@@ -431,9 +433,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
               <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="16" data-purecounter-duration="1"
+              <span data-purecounter-start="0" data-purecounter-end="19" data-purecounter-duration="1"
                 class="purecounter"></span>
-              <p>Hard Workers</p>
+              <p>Our Team</p>
             </div>
           </div>
 
@@ -449,34 +451,95 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+              <i class=""><iconify-icon icon="mdi:database-cog" width="1.2em" height="1.2em"></iconify-icon></i>
+              <h4 class="d-none d-lg-block">DataBase Management</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+              <i class=""><iconify-icon icon="game-icons:team-idea" width="1.2em" height="1.2em"></iconify-icon></i>
+              <h4 class="d-none d-lg-block">AI Department</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
               <i class=""><iconify-icon icon="carbon:ibm-open-enterprise-languages" width="1.2em"
                   height="1.2em"></iconify-icon></i>
               <h4 class="d-none d-lg-block">Full-Stack Development</h4>
             </a>
           </li>
           <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-              <i class=""><iconify-icon icon="mdi:database-cog" width="1.2em" height="1.2em"></iconify-icon></i>
-              <h4 class="d-none d-lg-block">DataBase Management</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
               <i class=""><iconify-icon icon="mdi:mobile-phone-settings-variant" width="1.2em"
                   height="1.2em"></iconify-icon></i>
               <h4 class="d-none d-lg-block">Mobile Developments</h4>
             </a>
           </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-              <i class=""><iconify-icon icon="game-icons:team-idea" width="1.2em" height="1.2em"></iconify-icon></i>
-              <h4 class="d-none d-lg-block">AI Department</h4>
-            </a>
-          </li>
         </ul>
 
         <div class="tab-content">
+
           <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Elevating Efficiency: Tailored Database Management Solutions</h3>
+                <p style="text-align: justify;">
+                  At CoreTech-MENA, We Redefine DataBase Management With Tailored Solutions. Seamlessly Integrating
+                  DataBases, Our Solutions Optimize Operations, Enhance Data Accessibility, Security, and Reliability,
+                  Fostering Unparalleled Innovation and Growth
+                </p>
+                <ul>
+                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> Customized Strategy: Crafted
+                    Specifically For Your Data
+                    Needs, Maximizing Efficiency</li>
+                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> Seamless Integration: Beyond
+                    Management, Our Solutions
+                    Integrate With Existing Systems, Ensuring Continuity</li>
+                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> Personalized Support: Dedicated
+                    Teams Provide Ongoing
+                    Assistance, Ensuring Data Evolves With Your Business Needs</li>
+                </ul>
+                <p style="text-align: justify;">
+                  Partner With CoreTech-MENA To Experience Tailored DataBase Solutions, Seamless Integration, and
+                  Personalized Support, Driving Your Business Forward in The Data-Centric Era
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/DataBase.png" alt="DataBase Managements" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3>Innovating Connectivity: AI Department's Tailored Solutions</h3>
+                <p style="text-align: justify;">
+                  At CoreTech-MENA, Our AI Department Redefines Digital Landscapes With Tailored Solutions. Seamlessly
+                  Connecting Businesses and Users, Our AI-Driven Innovations Optimize Operations, Elevate Accessibility,
+                  Efficiency, and User Experiences, Fostering Unparalleled Innovation and Growth
+                </p>
+                <ul>
+                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> Personalized Support: Dedicated
+                    AI Teams Provide Ongoing Assistance, Fostering Long-Term Success</li>
+                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> Seamless Integration: Our
+                    Expertise Extends Beyond AI Development, Ensuring Minimal Disruption
+                  </li>
+                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> Tailored AI Strategies: Crafted
+                    Specifically For Your Business Needs, Maximizing Efficiency</li>
+                </ul>
+                <p style="text-align: justify;">
+                  Partner With CoreTech-MENA AI Department To Experience Tailored AI Solutions, Seamless Integration,
+                  and Personalized Support, Driving Your Business Forward in The Era of AI-Driven Innovation
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/AI.png" alt="AI" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="tab-3">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
                 <h3>Revolutionizing Digital Landscapes: Full-Stack Development Expertise
@@ -509,38 +572,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
               </div>
             </div>
           </div>
-          <div class="tab-pane" id="tab-2">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Elevating Efficiency: Tailored Database Management Solutions</h3>
-                <p style="text-align: justify;">
-                  At CoreTech-MENA, We Redefine DataBase Management With Tailored Solutions. Seamlessly Integrating
-                  DataBases, Our Solutions Optimize Operations, Enhance Data Accessibility, Security, and Reliability,
-                  Fostering Unparalleled Innovation and Growth
-                </p>
 
-                <ul>
-                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> Customized Strategy: Crafted
-                    Specifically For Your Data
-                    Needs, Maximizing Efficiency</li>
-                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> Seamless Integration: Beyond
-                    Management, Our Solutions
-                    Integrate With Existing Systems, Ensuring Continuity</li>
-                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> Personalized Support: Dedicated
-                    Teams Provide Ongoing
-                    Assistance, Ensuring Data Evolves With Your Business Needs</li>
-                </ul>
-                <p style="text-align: justify;">
-                  Partner With CoreTech-MENA To Experience Tailored DataBase Solutions, Seamless Integration, and
-                  Personalized Support, Driving Your Business Forward in The Data-Centric Era
-                </p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/DataBase.png" alt="DataBase Managements" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-3">
+          <div class="tab-pane" id="tab-4">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                 <h3>Pioneering Connectivity: Tailored Mobile Development Solutions</h3>
@@ -572,34 +605,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
               </div>
             </div>
           </div>
-          <div class="tab-pane" id="tab-4">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <h3>Innovating Connectivity: AI Department's Tailored Solutions</h3>
-                <p style="text-align: justify;">
-                  At CoreTech-MENA, Our AI Department Redefines Digital Landscapes With Tailored Solutions. Seamlessly
-                  Connecting Businesses and Users, Our AI-Driven Innovations Optimize Operations, Elevate Accessibility,
-                  Efficiency, and User Experiences, Fostering Unparalleled Innovation and Growth
-                </p>
-                <ul>
-                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> Personalized Support: Dedicated
-                    AI Teams Provide Ongoing Assistance, Fostering Long-Term Success</li>
-                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> Seamless Integration: Our
-                    Expertise Extends Beyond AI Development, Ensuring Minimal Disruption
-                  </li>
-                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> Tailored AI Strategies: Crafted
-                    Specifically For Your Business Needs, Maximizing Efficiency</li>
-                </ul>
-                <p style="text-align: justify;">
-                  Partner With CoreTech-MENA AI Department To Experience Tailored AI Solutions, Seamless Integration,
-                  and Personalized Support, Driving Your Business Forward in The Era of AI-Driven Innovation
-                </p>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <img src="assets/img/AI.png" alt="AI" class="img-fluid">
-              </div>
-            </div>
-          </div>
+
         </div>
 
       </div>
@@ -1092,7 +1098,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
 
         <div class="section-title">
           <h2>Meeting</h2>
-          <p>Connect With Us To Schedule a Meeting and Discuss Your IT Needs Today!</p>
+          <p>Connect With Us To Schedule a Meeting and Discuss Your Future IT Needs Today!</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">

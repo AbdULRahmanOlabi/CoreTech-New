@@ -747,7 +747,6 @@ section {
   /* Style for Swiper navigation buttons */
   .swiper-button-next,
   .swiper-button-prev {
-    position: fixed;
     width: 40px; /* Adjust width as needed */
     height: 40px; /* Adjust height as needed */
     background-color: #e30512; /* Background color */

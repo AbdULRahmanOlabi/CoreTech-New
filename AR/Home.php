@@ -159,7 +159,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
 
 <head>
   <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!-- <meta content="width=device-width, initial-scale=1.0" name="viewport"> -->
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
   <title>CoreTech-MENA - الصفحة الرئيسية</title>
   <meta
@@ -236,7 +238,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
   <section id="hero" class="d-flex align-items-center">
 
     <div id="hero">
-      <video autoplay muted>
+      <video autoplay muted playsinline width="100%" height="auto">
         <source src="../assets/img/CoreTech-Mena.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -358,9 +360,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                   <i class="bx bx-receipt"></i>
                   <h4>من نحن</h4>
-                  <p style="text-align: justify;">نحن شركة تطوير ويب تأسست عام 2021 على يد وسيم شحادة وطلال الشهابي.
-                    ينصب تركيز شركتنا على تقديم تطبيقات الويب والهاتف المحمول باستخدام تقنيات مثل .Net Core وMongoDB
-                    وAngular وTypescript. ونتيجة لذلك، فإن حلول تكنولوجيا المعلومات التي تركز على المستخدم لدينا سريعة
+                  <p style="text-align: justify;">نحن شركة تطوير برمجيات تم إعادة إطلاقها عام 2021 على يد وسيم شحادة
+                    وطلال الشهابي.
+                    ينصب تركيز شركتنا على تقديم تطبيقات الويب والهاتف المحمول باستخدام أحدث التقنيات ونتيجة لذلك، فإن
+                    حلول تكنولوجيا المعلومات التي تركز على المستخدم لدينا سريعة
                     وقابلة للتطوير وقوية وتعمل بسلاسة في كل بيئة</p>
                 </div>
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
@@ -438,7 +441,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div class="count-box">
               <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="16" data-purecounter-duration="1"
+              <span data-purecounter-start="0" data-purecounter-end="19" data-purecounter-duration="1"
                 class="purecounter"></span>
               <p>فريقنا</p>
             </div>
@@ -456,65 +459,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+              <i class=""><iconify-icon icon="mdi:database-cog" width="1.2em" height="1.2em"></iconify-icon></i>
+              <h4 class="d-none d-lg-block">إدارة قواعد البيانات</h4>
+            </a>
+          </li>
+
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+              <i class=""><iconify-icon icon="game-icons:team-idea" width="1.2em" height="1.2em"></iconify-icon></i>
+              <h4 class="d-none d-lg-block">قسم الذكاء الاصطناعي</h4>
+            </a>
+          </li>
+
+          <li class="nav-item col-3">
+            <a class="nav-link " data-bs-toggle="tab" data-bs-target="#tab-3">
               <i class=""><iconify-icon icon="carbon:ibm-open-enterprise-languages" width="1.2em"
                   height="1.2em"></iconify-icon></i>
               <h4 class="d-none d-lg-block">تطوير المكدس الكامل</h4>
             </a>
           </li>
+
           <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-              <i class=""><iconify-icon icon="mdi:database-cog" width="1.2em" height="1.2em"></iconify-icon></i>
-              <h4 class="d-none d-lg-block">إدارة قواعد البيانات</h4>
-            </a>
-          </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
               <i class=""><iconify-icon icon="mdi:mobile-phone-settings-variant" width="1.2em"
                   height="1.2em"></iconify-icon></i>
               <h4 class="d-none d-lg-block">تطوير تطبيقات الموبايل</h4>
             </a>
           </li>
-          <li class="nav-item col-3">
-            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-              <i class=""><iconify-icon icon="game-icons:team-idea" width="1.2em" height="1.2em"></iconify-icon></i>
-              <h4 class="d-none d-lg-block">قسم الذكاء الاصطناعي</h4>
-            </a>
-          </li>
+
         </ul>
 
         <div class="tab-content">
-          <div class="tab-pane active show" id="tab-1">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 text-center" data-aos="fade-up" data-aos-delay="200">
-                <img src="../assets/img/FullStack-Development.png" alt="FullStack-Development" class="img-fluid">
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100"
-                style="direction: rtl;">
-                <h3>إحداث ثورة في الطبيعية الرقمية: خبرات تطوير متكاملة
-                </h3>
-                <p style="text-align: justify;">
-                  في CoreTech-MENA، نقوم بإعادة تعريف المشهد الرقمي من خلال حلول تطوير متكاملة وشاملة. تمتد خبرتنا إلى
-                  تقنيات الواجهة الأمامية والخلفية، مما يتيح التكامل السلس والأداء الأمثل عبر جميع طبقات التطبيق الخاص
-                  بك
-                </p>
-                <ul>
-                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> الإتقان الشامل: الخبرة في كل من
-                    تقنيات الواجهة الأمامية والخلفية</li>
-                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> التكامل السلس: إتقان التكنولوجيا
-                    المتنوعة للنشر السلس
-                  </li>
-                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> حلول شاملة: خدمات شاملة تغطي
-                    دورة حياة التطوير بأكملها</li>
-                </ul>
-                <p style="text-align: justify;">
-                  شراكة مع CoreTech-MENA لتسخير قوة التطوير الشامل ورفع مستوى حضورك الرقمي. استمتع بتجربة فوائد نهجنا
-                  الشامل والتكامل السلس والحلول الشاملة، حيث نعمل معًا لإحداث ثورة في المشهد الرقمي الخاص بك
-                </p>
-              </div>
 
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-2">
+          <div class="tab-pane active show" id="tab-1">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 text-center">
                 <img src="../assets/img/DataBase.png" alt="DataBase Managements" class="img-fluid">
@@ -541,35 +518,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
               </div>
             </div>
           </div>
-          <div class="tab-pane" id="tab-3">
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 text-center">
-                <img src="../assets/img/Mobile Development.png" alt="Mobile Development" class="img-fluid">
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 mt-3 mt-lg-0" style="direction: rtl;">
-                <h3>الاتصال الرائد: حلول تطوير الأجهزة المحمولة المخصصة</h3>
-                <p style="text-align: justify;">
-                  في CoreTech-MENA، نقوم بإعادة تعريف المشهد الرقمي من خلال خدمات تطوير الهاتف المحمول المخصصة. من خلال
-                  ربط الشركات والمستخدمين بسلاسة، تعمل حلولنا على تحسين العمليات ورفع مستوى إمكانية الوصول والكفاءة
-                  وتجارب المستخدم، وتعزيز الابتكار والنمو الذي لا مثيل له
-                </p>
-                <ul>
-                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> استراتيجية مصممة خصيصًا: مصممة
-                    خصيصًا لتلبية احتياجات عملك، مما يزيد من الكفاءة</li>
-                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> التكامل السلس: الخبرة التي
-                    تتجاوز التطوير تضمن الحد الأدنى من الاضطرابات
-                  </li>
-                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> الدعم الشخصي: توفر الفرق المخصصة
-                    المساعدة المستمرة، مما يعزز النجاح على المدى الطويل</li>
-                </ul>
-                <p style="text-align: justify;">
-                  كن شريكاً مع CoreTech-MENA للشروع في رحلة التحول الرقمي. اكتشف الفرق مع حلولنا المخصصة، والتكامل الذي
-                  لا مثيل له، والدعم المخصص، مما يقود أعمالك إلى آفاق جديدة في عصر الهاتف المحمول أولاً
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-4">
+
+          <div class="tab-pane" id="tab-2">
             <div class="row">
               <div class="col-lg-6 order-2 order-lg-1 text-center">
                 <img src="../assets/img/AI.png" alt="AI" class="img-fluid">
@@ -597,6 +547,67 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
               </div>
             </div>
           </div>
+
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 text-center" data-aos="fade-up" data-aos-delay="200">
+                <img src="../assets/img/FullStack-Development.png" alt="FullStack-Development" class="img-fluid">
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100"
+                style="direction: rtl;">
+                <h3>إحداث ثورة في الطبيعية الرقمية: خبرات تطوير متكاملة
+                </h3>
+                <p style="text-align: justify;">
+                  في CoreTech-MENA، نقوم بإعادة تعريف المشهد الرقمي من خلال حلول تطوير متكاملة وشاملة. تمتد خبرتنا إلى
+                  تقنيات الواجهة الأمامية والخلفية، مما يتيح التكامل السلس والأداء الأمثل عبر جميع طبقات التطبيق الخاص
+                  بك
+                </p>
+                <ul>
+                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> الإتقان الشامل: الخبرة في كل من
+                    تقنيات الواجهة الأمامية والخلفية</li>
+                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> التكامل السلس: إتقان التكنولوجيا
+                    المتنوعة للنشر السلس
+                  </li>
+                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> حلول شاملة: خدمات شاملة تغطي
+                    دورة حياة التطوير بأكملها</li>
+                </ul>
+                <p style="text-align: justify;">
+                  شراكة مع CoreTech-MENA لتسخير قوة التطوير الشامل ورفع مستوى حضورك الرقمي. استمتع بتجربة فوائد نهجنا
+                  الشامل والتكامل السلس والحلول الشاملة، حيث نعمل معًا لإحداث ثورة في المشهد الرقمي الخاص بك
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane" id="tab-4">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 text-center">
+                <img src="../assets/img/Mobile Development.png" alt="Mobile Development" class="img-fluid">
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 mt-3 mt-lg-0" style="direction: rtl;">
+                <h3>الاتصال الرائد: حلول تطوير الأجهزة المحمولة المخصصة</h3>
+                <p style="text-align: justify;">
+                  في CoreTech-MENA، نقوم بإعادة تعريف المشهد الرقمي من خلال خدمات تطوير الهاتف المحمول المخصصة. من خلال
+                  ربط الشركات والمستخدمين بسلاسة، تعمل حلولنا على تحسين العمليات ورفع مستوى إمكانية الوصول والكفاءة
+                  وتجارب المستخدم، وتعزيز الابتكار والنمو الذي لا مثيل له
+                </p>
+                <ul>
+                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> استراتيجية مصممة خصيصًا: مصممة
+                    خصيصًا لتلبية احتياجات عملك، مما يزيد من الكفاءة</li>
+                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> التكامل السلس: الخبرة التي
+                    تتجاوز التطوير تضمن الحد الأدنى من الاضطرابات
+                  </li>
+                  <li style="text-align: justify;"><i class="ri-check-double-line"></i> الدعم الشخصي: توفر الفرق المخصصة
+                    المساعدة المستمرة، مما يعزز النجاح على المدى الطويل</li>
+                </ul>
+                <p style="text-align: justify;">
+                  كن شريكاً مع CoreTech-MENA للشروع في رحلة التحول الرقمي. اكتشف الفرق مع حلولنا المخصصة، والتكامل الذي
+                  لا مثيل له، والدعم المخصص، مما يقود أعمالك إلى آفاق جديدة في عصر الهاتف المحمول أولاً
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -1090,7 +1101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
 
         <div class="section-title">
           <h2>اجتماعات</h2>
-          <p>تواصل معنا لتحديد موعد اجتماع ومناقشة احتياجاتك من تكنولوجيا المعلومات اليوم.</p>
+          <p>تواصل معنا لتحديد موعد اجتماع ومناقشة احتياجاتك المستقبلية في مجال تكنولوجيا المعلومات اليوم</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
