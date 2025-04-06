@@ -1155,88 +1155,128 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
     </section><!-- End Meeting Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact" style="padding: 0;">
+    <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
           <h2>تواصل معنا</h2>
-          <p>تواصل مع فريق حلول تكنولوجيا المعلومات لدينا للحصول على المساعدة والاستفسارات الشخصية. نحن ملتزمون بدعم
-            رحلتك التكنولوجية وتوفير الحلول التي تحتاجها للنجاح في المجال الرقمي</p>
+          <p>
+            تواصل مع فريق حلول تكنولوجيا المعلومات لدينا للحصول على المساعدة والاستفسارات الشخصية. نحن ملتزمون بدعم
+            رحلتك التكنولوجية وتوفير الحلول التي تحتاجها للنجاح في العالم الرقمي.
+          </p>
         </div>
 
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-6">
+          <!-- Contact Cards -->
+          <div class="col-12">
+            <div class="row g-4">
 
-            <div class="row">
-              <div class="col-md-12">
-                <div class="info-box">
+              <!-- Main Office -->
+              <div class="col-lg-4">
+                <div class="info-box text-center p-4 h-100">
                   <i class="bx bx-map"></i>
-                  <h3>عنواننا</h3>
-                  <p>
-                    <strong>المكتب الرئيسي:</strong><br>
-                    بناء البوصلة<br>
-                    طريق الشهداء, المنطقة الصناعية الحمراء - المنطقة الحرة,<br>
-                    رأس الخيمة، الإمارات العربية المتحدة<br><br>
-
-                    <strong>الفرع الثاني:</strong><br>
-                    مكتب 43-44، الفهيدي، بر دبي<br>
-                    .دبي، الإمارات العربية المتحدة
+                  <h5 class="fw-bold">المكتب الرئيسي</h5>
+                  <p class="small mb-3">
+                    بناء البوصلة، طريق الشهداء،<br>
+                    المنطقة الصناعية الحمراء - المنطقة الحرة،<br>
+                    رأس الخيمة، الإمارات العربية المتحدة
                   </p>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d899.0447354540795!2d55.78556386955713!3d25.66536229858831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef60b0059d3a40d%3A0x26c11e56db834c61!2sCoreTech-MENA!5e0!3m2!1sen!2s!4v1708439300133!5m2!1sen!2s"
+                    width="100%" height="200" style="border:0; border-radius:8px;" allowfullscreen=""
+                    loading="lazy"></iframe>
                 </div>
               </div>
 
-              <div class="col-md-6">
-                <div class="info-box mt-4">
-                  <i class="bx bx-envelope"></i>
-                  <h3>ارسل لنا عبر البريد الإلكتروني</h3>
-                  <p><a href="mailto:info@CoreTech-MENA.com">Info@CoreTech-MENA.com</a></p>
+              <!-- Branch 2 -->
+              <div class="col-lg-4">
+                <div class="info-box text-center p-4 h-100">
+                  <i class="bx bx-map"></i>
+                  <h5 class="fw-bold">الفرع الثاني</h5>
+                  <p class="small mb-3">
+                    مكتب 43-44، الفهيدي، بر دبي،<br>
+                    دبي، الإمارات العربية المتحدة
+                  </p>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.002858890064!2d55.29948357542065!3d25.259186177662456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4341fc5f44ab%3A0x4a5b51bd4d359c3e!2sAl%20Fahidi%2C%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1712345678901!5m2!1sen!2s"
+                    width="100%" height="200" style="border:0; border-radius:8px;" allowfullscreen=""
+                    loading="lazy"></iframe>
                 </div>
               </div>
 
-              <div class="col-md-6">
-                <div class="info-box mt-4">
-                  <i class="bx bx-phone-call"></i>
-                  <h3>اتصل بنا</h3>
-                  <p><a href="tel:00971561212043">+971 561212043</a></p>
+              <!-- Branch 3 -->
+              <div class="col-lg-4">
+                <div class="info-box text-center p-4 h-100">
+                  <i class="bx bx-map"></i>
+                  <h5 class="fw-bold">الفرع الثالث</h5>
+                  <p class="small mb-3">
+                    6210 Wilshire Blvd، Ste 208 Pmb 539،<br>
+                    Ca90048، لوس أنجلوس، الولايات المتحدة
+                  </p>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.618837496889!2d-118.36585998478283!3d34.06242428060268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b9116e1f8b3f%3A0xdcead0e1fbd40b56!2s6210%20Wilshire%20Blvd%2C%20Los%20Angeles%2C%20CA%2090048%2C%20USA!5e0!3m2!1sen!2s!4v1712345678902!5m2!1sen!2s"
+                    width="100%" height="200" style="border:0; border-radius:8px;" allowfullscreen=""
+                    loading="lazy"></iframe>
                 </div>
               </div>
+
             </div>
-
-
           </div>
 
-          <div class="col-lg-6">
-            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" role="form" class="php-email-form"
-              style="direction: rtl;">
-              <div class="row">
-                <div class="col form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="اسمك" required>
+          <!-- Contact Form and Info -->
+          <div class="col-12 mt-5">
+            <div class="row g-4">
+
+              <div class="col-lg-6">
+                <div class="info-box text-center p-4 h-100">
+                  <i class="bx bx-envelope"></i>
+                  <h5 class="fw-bold">راسلنا عبر البريد الإلكتروني</h5>
+                  <p class="mb-0"><a href="mailto:info@CoreTech-MENA.com">Info@CoreTech-MENA.com</a></p>
                 </div>
-                <div class="col form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="بريدك الالكتروني"
-                    required>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="info-box text-center p-4 h-100">
+                  <i class="bx bx-phone-call"></i>
+                  <h5 class="fw-bold">اتصل بنا</h5>
+                  <p class="mb-0"><a href="tel:00971561212043">+971 561212043</a></p>
+                  <p class="mb-0"><a href="tel:0013106966156">+1 (310) 696-6156</a></p>
                 </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="موضوع الرسالة"
-                  required>
+
+              <div class="col-12">
+                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" role="form" class="php-email-form"
+                  style="direction: rtl;">
+                  <div class="row gy-3">
+                    <div class="col-md-6 form-group">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="اسمك" required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="بريدك الإلكتروني"
+                        required>
+                    </div>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="موضوع الرسالة"
+                      required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <textarea class="form-control" name="message" rows="7" placeholder="الرسالة" required></textarea>
+                  </div>
+                  <div class="text-center mt-3"><button type="submit">أرسل رسالتك</button></div>
+                </form>
               </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="12" placeholder="الرسالة" required></textarea>
-              </div>
-              <div class="text-center"><button type="submit">أرسل رسالتك</button></div>
-            </form>
+
+            </div>
           </div>
 
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d899.0447354540795!2d55.78556386955713!3d25.66536229858831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef60b0059d3a40d%3A0x26c11e56db834c61!2sCoreTech-MENA!5e0!3m2!1sen!2s!4v1708439300133!5m2!1sen!2s"
-            width="600" height="450" style="border:0; padding-top:10px !important; border-radius:5px !important;"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section>
+    <!-- End Contact Section -->
+
 
   </main><!-- End #main -->
 
