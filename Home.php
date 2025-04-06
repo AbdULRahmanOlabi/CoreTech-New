@@ -255,6 +255,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
             </div>
             <div class="swiper-slide"><img src="assets/img/clients/ISB - Logo.png" class="img-fluid" alt="ISB - Logo">
             </div>
+            <div class="swiper-slide"><img src="assets/img/clients/IEUK - Logo.png" class="img-fluid" alt="IEUK - Logo">
+            </div>
             <div class="swiper-slide"><img src="assets/img/clients/Client1 - Logo.png" class="img-fluid"
                 alt="Client1 - Logo">
             </div>
@@ -282,26 +284,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                 alt="AL-Hekma - Logo"></div>
             <div class="swiper-slide"><img src="assets/img/clients/Resaleh - Logo.png" class="img-fluid"
                 alt="Resaleh - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Manaret-Al-Majd - Logo.png" class="img-fluid"
-                alt="Manaret Al-Majd - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Syrian-Star - Logo.png" class="img-fluid"
-                alt="Syrian Star - Logo"></div>
             <div class="swiper-slide"><img src="assets/img/clients/Mansour - Logo.png" class="img-fluid"
                 alt="Mansour - Logo"></div>
             <div class="swiper-slide"><img src="assets/img/clients/Hadara - Logo.png" class="img-fluid"
                 alt="Hadara - Logo"></div>
             <div class="swiper-slide"><img src="assets/img/clients/Massar - Logo.png" class="img-fluid"
                 alt="Massar - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Al-Abjadiya - Logo.png" class="img-fluid"
-                alt="Al-Abjadiya - Logo"></div>
             <div class="swiper-slide"><img src="assets/img/clients/Syrian-Community - Logo.png" class="img-fluid"
                 alt="Syrian Community - Logo"></div>
             <div class="swiper-slide"><img src="assets/img/clients/Promies - Logo.png" class="img-fluid"
                 alt="Promies - Logo"></div>
             <div class="swiper-slide"><img src="assets/img/clients/Yarmouk - Logo.png" class="img-fluid"
                 alt="Yarmouk - Logo"></div>
-            <div class="swiper-slide"><img src="assets/img/clients/Al-Ola - Logo.png" class="img-fluid"
-                alt="Al-Ola - Logo"></div>
             <div class="swiper-slide"><img src="assets/img/clients/Manara-International - Logo.png" class="img-fluid"
                 alt="Manara International - Logo"></div>
             <div class="swiper-slide"><img src="assets/img/clients/Syrian-Flowers - Logo.png" class="img-fluid"
@@ -323,6 +317,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
             <div class="swiper-slide"><img src="assets/img/clients/AlFajr - Logo.png" class="img-fluid"
                 alt="AlFajr - Logo"></div>
             <div class="swiper-slide"><img src="assets/img/clients/SVS - Logo.png" class="img-fluid" alt="SVS-Logo">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/Arab Virtual School - Logo.png" class="img-fluid"
+                alt="Arab Virtual School-Logo">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/Syrian Expatriates - Logo.png" class="img-fluid"
+                alt="Syrian Expatriates - Logo">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/Zain - Logo.png" class="img-fluid" alt="Zain - Logo">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/Syrian Model Virtual School - Logo.png"
+                class="img-fluid" alt="Syrian Model Virtual School - Logo">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/Al-Marfoo - Logo.png" class="img-fluid"
+                alt="Al-Marfoo - Logo">
+            </div>
+            <div class="swiper-slide"><img src="assets/img/clients/Batool - Logo.png" class="img-fluid"
+                alt="Batool - Logo">
             </div>
           </div>
           <!-- <div class="swiper-pagination"></div> -->
@@ -357,7 +368,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
                   <i class="bx bx-receipt"></i>
                   <h4>Who we are</h4>
-                  <p style="text-align: justify;">We Are a Software Development Company Relaunched in 2021 By Wasim Chihadeh and
+                  <p style="text-align: justify;">We Are a Software Development Company Relaunched in 2021 By Wasim
+                    Chihadeh and
                     Talal Shihabi. Our
                     Company’s Focus is To Deliver Web and Mobile Applications
                     With Latest Technologies. As a Result, our
@@ -1136,72 +1148,115 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Connect With Our IT Solutions Team For Personalized Assistance and Inquiries. We're Dedicated To Supporting
-            Your Technological Journey and Providing The Solutions You Need For Success in The Digital Realm</p>
+          <p>
+            Connect With Our IT Solutions Team For Personalized Assistance and Inquiries. We're Dedicated To Supporting
+            Your Technological Journey and Providing The Solutions You Need For Success in The Digital Realm
+          </p>
         </div>
 
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4" data-aos="fade-up" data-aos-delay="100">
+          <!-- Contact Cards and Maps -->
+          <div class="col-12">
+            <div class="row g-4">
 
-          <div class="col-lg-6">
-
-            <div class="row">
-              <div class="col-md-12">
-                <div class="info-box">
+              <!-- Main Office -->
+              <div class="col-lg-4">
+                <div class="info-box text-center p-4 h-100">
                   <i class="bx bx-map"></i>
-                  <h3>Our Address</h3>
-                  <p>Compass Building,
-                    Al Shohada Road,
-                    AL Hamra Industrial Zone-FZ,<br>
-                    Ras Al Khaimah, United Arab Emirates</p>
+                  <h5 class="fw-bold">Main Office</h5>
+                  <p class="small mb-3">
+                    Compass Building, Al Shohada Road,<br>
+                    AL Hamra Industrial Zone-FZ,
+                    Ras Al Khaimah, UAE
+                  </p>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d899.0447354540795!2d55.78556386955713!3d25.66536229858831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef60b0059d3a40d%3A0x26c11e56db834c61!2sCoreTech-MENA!5e0!3m2!1sen!2s!4v1708439300133!5m2!1sen!2s"
+                    width="100%" height="200" style="border:0; border-radius:8px;" allowfullscreen=""
+                    loading="lazy"></iframe>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4">
-                  <i class="bx bx-envelope"></i>
-                  <h3>Email Us</h3>
-                  <!-- <p>info@CoreTech-MENA.com</p> -->
-                  <p><a href="mailto:info@CoreTech-MENA.com">Info@CoreTech-MENA.com</a></p>
+
+              <!-- Branch 2 -->
+              <div class="col-lg-4">
+                <div class="info-box text-center p-4 h-100">
+                  <i class="bx bx-map"></i>
+                  <h5 class="fw-bold">Branch 2</h5>
+                  <p class="small mb-3">
+                    Office 43-44, Al Fahidi, Bur Dubai,<br>
+                    Dubai, UAE
+                  </p>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.002858890064!2d55.29948357542065!3d25.259186177662456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f4341fc5f44ab%3A0x4a5b51bd4d359c3e!2sAl%20Fahidi%2C%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1712345678901!5m2!1sen!2s"
+                    width="100%" height="200" style="border:0; border-radius:8px;" allowfullscreen=""
+                    loading="lazy"></iframe>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="info-box mt-4">
-                  <i class="bx bx-phone-call"></i>
-                  <h3>Call Us</h3>
-                  <p><a href="tel:00971561212043">+971 561212043</a></p>
+
+              <!-- Branch 3 -->
+              <div class="col-lg-4">
+                <div class="info-box text-center p-4 h-100">
+                  <i class="bx bx-map"></i>
+                  <h5 class="fw-bold">Branch 3</h5>
+                  <p class="small mb-3">
+                    6210 Wilshire Blvd, Ste 208 Pmb 539,<br>
+                    Ca90048, Los Angeles, USA
+                  </p>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.618837496889!2d-118.36585998478283!3d34.06242428060268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b9116e1f8b3f%3A0xdcead0e1fbd40b56!2s6210%20Wilshire%20Blvd%2C%20Los%20Angeles%2C%20CA%2090048%2C%20USA!5e0!3m2!1sen!2s!4v1712345678902!5m2!1sen!2s"
+                    width="100%" height="200" style="border:0; border-radius:8px;" allowfullscreen=""
+                    loading="lazy"></iframe>
                 </div>
               </div>
             </div>
-
           </div>
 
-          <div class="col-lg-6">
-            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          <!-- Contact Form -->
+          <div class="col-12 mt-5">
+            <div class="row g-4">
+              <div class="col-lg-6">
+                <div class="info-box text-center p-4 h-100">
+                  <i class="bx bx-envelope"></i>
+                  <h5 class="fw-bold">Email Us</h5>
+                  <p class="mb-0"><a href="mailto:info@CoreTech-MENA.com">Info@CoreTech-MENA.com</a></p>
                 </div>
-                <div class="col form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
 
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d899.0447354540795!2d55.78556386955713!3d25.66536229858831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef60b0059d3a40d%3A0x26c11e56db834c61!2sCoreTech-MENA!5e0!3m2!1sen!2s!4v1708439300133!5m2!1sen!2s"
-            width="600" height="450" style="border:0; padding-top:10px !important; border-radius:5px !important;"
-            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="col-lg-6">
+                <div class="info-box text-center p-4 h-100">
+                  <i class="bx bx-phone-call"></i>
+                  <h5 class="fw-bold">Call Us</h5>
+                  <p class="mb-0"><a href="tel:00971561212043">+971 561212043</a></p>
+                  <p class="mb-0"><a href="tel:0013106966156">+1 (310) 696-6156</a></p>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" role="form" class="php-email-form">
+                  <div class="row gy-3">
+                    <div class="col-md-6 form-group">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                        required>
+                    </div>
+                  </div>
+                  <div class="form-group mt-3">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                  </div>
+                  <div class="form-group mt-3">
+                    <textarea class="form-control" name="message" rows="7" placeholder="Message" required></textarea>
+                  </div>
+                  <div class="text-center mt-3"><button type="submit">Send Message</button></div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-
       </div>
-    </section><!-- End Contact Section -->
+    </section>
+    <!-- End Contact Section -->
+
 
   </main><!-- End #main -->
 
@@ -1215,11 +1270,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>CoreTech-MENA<span>.</span></h3>
             <p>
-              Compass Building <br>
-              Al Shohada Road <br>
+              <strong>Main Office:</strong><br>
+              Compass Building, Al Shohada Road <br>
               AL Hamra Industrial Zone-FZ <br>
-              Ras Al Khaimah - United Arab Emirates <br>
-              <strong>Phone:</strong> <a href="tel:00971561212043">+971 561212043</a><br>
+              Ras Al Khaimah - United Arab Emirates <br><br>
+
+              <strong>Branch 2:</strong><br>
+              Office 43-44, Al Fahidi, Bur Dubai,<br>
+              Dubai, United Arab Emirates.<br><br>
+
+              <strong>Branch 3:</strong><br>
+              6210 Wilshire Blvd, Ste 208 Pmb 539,<br>
+              Ca90048, Los Angeles, USA <br> <br>
+
+              <strong>Phone:</strong> <a href="tel:00971561212043">+971 561212043</a>, <a href="tel:0013106966156">+1
+                (310) 696-6156</a><br>
               <strong>Email:</strong> <a href="mailto:info@CoreTech-MENA.com">Info@CoreTech-MENA.com</a><br>
             </p>
           </div>
@@ -1260,7 +1325,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
               <input id="joinBtn" type="submit" value="Join Us">
             </form>
           </div>
-
 
         </div>
       </div>

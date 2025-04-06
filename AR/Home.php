@@ -269,6 +269,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
             <div class="swiper-slide"><img src="../assets/img/clients/ISB - Logo.png" class="img-fluid"
                 alt="ISB - Logo">
             </div>
+            <div class="swiper-slide"><img src="../assets/img/clients/IEUK - Logo.png" class="img-fluid"
+                alt="IEUK - Logo">
+            </div>
             <div class="swiper-slide"><img src="../assets/img/clients/Client1 - Logo.png" class="img-fluid"
                 alt="Client1 - Logo">
             </div>
@@ -338,6 +341,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
             <div class="swiper-slide"><img src="../assets/img/clients/AlFajr - Logo.png" class="img-fluid"
                 alt="AlFajr - Logo"></div>
             <div class="swiper-slide"><img src="../assets/img/clients/SVS - Logo.png" class="img-fluid" alt="SVS-Logo">
+            </div>
+            <div class="swiper-slide"><img src="../assets/img/clients/Arab Virtual School - Logo.png" class="img-fluid"
+                alt="Arab Virtual School-Logo">
+            </div>
+            <div class="swiper-slide"><img src="../assets/img/clients/Syrian Expatriates - Logo.png" class="img-fluid"
+                alt="Syrian Expatriates - Logo">
+            </div>
+            <div class="swiper-slide"><img src="../assets/img/clients/Zain - Logo.png" class="img-fluid"
+                alt="Zain - Logo">
+            </div>
+            <div class="swiper-slide"><img src="../assets/img/clients/Syrian Model Virtual School - Logo.png"
+                class="img-fluid" alt="Syrian Model Virtual School - Logo">
+            </div>
+            <div class="swiper-slide"><img src="../assets/img/clients/Al-Marfoo - Logo.png" class="img-fluid"
+                alt="Al-Marfoo - Logo">
+            </div>
+            <div class="swiper-slide"><img src="../assets/img/clients/Batool - Logo.png" class="img-fluid"
+                alt="Batool - Logo">
             </div>
           </div>
           <!-- <div class="swiper-pagination"></div> -->
@@ -1152,20 +1173,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                 <div class="info-box">
                   <i class="bx bx-map"></i>
                   <h3>عنواننا</h3>
-                  <p>بناء البوصلة
-                    طريق الشهداء,
-                    المنطقة الصناعية الحمراء - المنطقة الحرة,<br>
-                    رأس الخيمة، الإمارات العربية المتحدة</p>
+                  <p>
+                    <strong>المكتب الرئيسي:</strong><br>
+                    بناء البوصلة<br>
+                    طريق الشهداء, المنطقة الصناعية الحمراء - المنطقة الحرة,<br>
+                    رأس الخيمة، الإمارات العربية المتحدة<br><br>
+
+                    <strong>الفرع الثاني:</strong><br>
+                    مكتب 43-44، الفهيدي، بر دبي<br>
+                    .دبي، الإمارات العربية المتحدة
+                  </p>
                 </div>
               </div>
+
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-envelope"></i>
                   <h3>ارسل لنا عبر البريد الإلكتروني</h3>
-                  <!-- <p>info@CoreTech-MENA.com</p> -->
                   <p><a href="mailto:info@CoreTech-MENA.com">Info@CoreTech-MENA.com</a></p>
                 </div>
               </div>
+
               <div class="col-md-6">
                 <div class="info-box mt-4">
                   <i class="bx bx-phone-call"></i>
@@ -1174,6 +1202,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                 </div>
               </div>
             </div>
+
 
           </div>
 
@@ -1194,7 +1223,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
                   required>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="6" placeholder="الرسالة" required></textarea>
+                <textarea class="form-control" name="message" rows="12" placeholder="الرسالة" required></textarea>
               </div>
               <div class="text-center"><button type="submit">أرسل رسالتك</button></div>
             </form>
@@ -1212,49 +1241,61 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer" dir="rtl">
 
     <div class="footer-top-AR">
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-contact" style="direction: rtl;">
+          <div class="col-lg-3 col-md-6 footer-contact">
             <h3>CoreTech-MENA<span>.</span></h3>
             <p>
-              بناء البوصلة <br>
-              طريق الشهداء, <br>
+              <strong>المكتب الرئيسي:</strong><br>
+              بناء البوصلة<br>
+              طريق الشهداء,<br>
               المنطقة الصناعية الحمراء - المنطقة الحرة,<br>
-              رأس الخيمة، الإمارات العربية المتحدة <br>
-              <strong>Phone:</strong> <a href="tel:00971561212043">+971 561212043</a><br>
-              <strong>Email:</strong> <a href="mailto:info@CoreTech-MENA.com">Info@CoreTech-MENA.com</a><br>
+              رأس الخيمة، الإمارات العربية المتحدة<br><br>
+
+              <strong>الفرع الثاني:</strong><br>
+              مكتب 43-44، الفهيدي، بر دبي،<br>
+              دبي، الإمارات العربية المتحدة.<br><br>
+
+              <strong>الفرع الثالث:</strong><br>
+              6210 Wilshire Blvd, Ste 208 Pmb 539,<br>
+              Ca90048، لوس أنجلوس، الولايات المتحدة الأمريكية<br><br>
+
+              <strong>رقم الهاتف:</strong>
+              <a href="tel:00971561212043">00971561212043</a>،
+              <a href="tel:0013106966156">0013106966156</a><br>
+
+              <strong>البريد الالكتروني:</strong>
+              <a href="mailto:info@CoreTech-MENA.com">Info@CoreTech-MENA.com</a><br>
             </p>
           </div>
 
-          <div class="col-lg-2 col-md-6 footer-links" style="direction: rtl;">
+          <div class="col-lg-2 col-md-6 footer-links">
             <h4>روابط مفيدة</h4>
             <ul>
               <li><i class="bx bx-chevron-left"></i> <a href="#">الصفحة الرئيسية</a></li>
               <li><i class="bx bx-chevron-left"></i> <a href="#about">حول الشركة</a></li>
               <li><i class="bx bx-chevron-left"></i> <a href="#services">خدمات الشركة</a></li>
               <li><i class="bx bx-chevron-left"></i> <a href="#contact">تواصل معنا</a></li>
-              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li> -->
             </ul>
           </div>
 
-          <div class="col-lg-3 col-md-6 footer-links" style="direction: rtl;">
+          <div class="col-lg-3 col-md-6 footer-links">
             <h4>خدماتنا</h4>
             <ul>
               <li><i class="bx bx-chevron-left"></i> <a href="#services">الهندسة المعمارية للمؤسسات</a></li>
               <li><i class="bx bx-chevron-left"></i> <a href="#services">إدارة البيانات</a></li>
               <li><i class="bx bx-chevron-left"></i> <a href="#services">نضج التجربة الرقمية</a></li>
               <li><i class="bx bx-chevron-left"></i> <a href="#services">تطوير البرمجيات</a></li>
-              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Digital Transformation</a></li> -->
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4 style="direction: rtl;">انضم إلى فريقنا</h4>
-            <p style="direction: rtl;">أرسل لنا سيرتك الذاتية! سوف نتواصل معك في أسرع وقت ممكن..</p>
+            <h4>انضم إلى فريقنا</h4>
+            <p>أرسل لنا سيرتك الذاتية! سوف نتواصل معك في أسرع وقت ممكن..</p>
             <form id="joinForm" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data"
               onsubmit="submitForm()">
               <div class="input-group">
@@ -1270,7 +1311,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
         </div>
       </div>
     </div>
-    <div class="container d-md-flex py-4">
+
+    <div class="container d-md-flex py-4" dir="ltr">
       <div class="social-links text-center text-md-start pt-3 pt-md-0 me-md-auto">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -1279,7 +1321,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
       <div class="text-center text-md-end">
-
         <div class="copyright">
           كل الحقوق محفوظة <strong><span>CoreTech-MENA</span></strong>. حقوق النشر &copy;
         </div>
