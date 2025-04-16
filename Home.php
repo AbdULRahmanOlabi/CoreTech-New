@@ -196,7 +196,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
     <div class="container d-flex align-items-center">
       <!-- <h1 class="logo me-auto"><a href="Home">CoreTech-MENA<span>.</span></a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="Home" class="logo me-auto"><img src="assets/img/CoreTech-Mena - Logo.png" alt="Company-Logo"></a>
+      <a href="#" class="logo me-auto"><img src="assets/img/CoreTech-Mena - Logo.png" alt="Company-Logo"></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
@@ -209,7 +209,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           <li class="dropdown"><a href="#"><i class="bi bi-translate"></i></a>
             <ul>
               <li><a href="#"><iconify-icon icon="emojione-v1:flag-for-united-states"></iconify-icon>English</a></li>
-              <li><a href="AR/Home"><iconify-icon
+              <li><a href="AR/"><iconify-icon
                     icon="emojione-v1:flag-for-united-arab-emirates"></iconify-icon>العربية</a>
               </li>
             </ul>
