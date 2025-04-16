@@ -460,30 +460,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
     <section id="tabs" class="tabs">
       <div class="container" data-aos="fade-up">
 
+        <div class="section-title">
+          <h2>Distinctive Features</h2>
+          <p>Experience Industry-Leading Solutions Engineered For Performance, Scalability, and Innovation - Delivering
+            Tangible Business Value At Every Level</p>
+        </div>
+
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-              <i class=""><iconify-icon icon="mdi:database-cog" width="1.2em" height="1.2em"></iconify-icon></i>
+              <i class=""><iconify-icon icon="mdi:database-cog"></iconify-icon></i>
               <h4 class="d-none d-lg-block">DataBase Management</h4>
             </a>
           </li>
           <li class="nav-item col-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-              <i class=""><iconify-icon icon="game-icons:team-idea" width="1.2em" height="1.2em"></iconify-icon></i>
+              <i class=""><iconify-icon icon="game-icons:team-idea"></iconify-icon></i>
               <h4 class="d-none d-lg-block">AI Department</h4>
             </a>
           </li>
           <li class="nav-item col-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-              <i class=""><iconify-icon icon="carbon:ibm-open-enterprise-languages" width="1.2em"
-                  height="1.2em"></iconify-icon></i>
+              <i class=""><iconify-icon icon="carbon:ibm-open-enterprise-languages"></iconify-icon></i>
               <h4 class="d-none d-lg-block">Full-Stack Development</h4>
             </a>
           </li>
           <li class="nav-item col-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-              <i class=""><iconify-icon icon="mdi:mobile-phone-settings-variant" width="1.2em"
-                  height="1.2em"></iconify-icon></i>
+              <i class=""><iconify-icon icon="mdi:mobile-phone-settings-variant"></iconify-icon></i>
               <h4 class="d-none d-lg-block">Mobile Developments</h4>
             </a>
           </li>
@@ -1104,8 +1108,56 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
       </div>
     </section>End Team Section -->
 
+    <!-- Alt Services 2 Section -->
+    <section id="alt-services-2" class="alt-services-2 section">
+      <div class="section-title">
+        <h2>Our Solution</h2>
+        <p>Discover the Power of Our Ready-to-Implement Education Assessment System</p>
+      </div>
+
+      <div class="container">
+        <div class="row justify-content-around gy-4">
+          <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1 solution-content"
+            data-aos="fade-up" data-aos-delay="100">
+            <h3>
+              <a href="https://ies-mena.net/" class="project-link" target="_blank">
+                Intelligent Education System (IES)
+              </a>
+            </h3>
+            <p>
+              At IES, We've Developed a Complete, Ready-To-Deploy Assessment Platform That's Already Transforming
+              Education in Saudi Arabia. Our System isn't Just a Concept - it's a Fully Operational Solution That Aligns
+              Perfectly With Vision 2030 Goals, Empowering Institutions to Build a Thriving, knowledge-Based Society
+              Today.
+            </p>
+            <ul class="feature-list">
+              <li><i class="ri-check-double-line"></i> <strong>Systematic Learning Pathways:</strong> Visually Map Each
+                Learner's Journey With Activities Connected to Educational Goals</li>
+              <li><i class="ri-check-double-line"></i> <strong>Comprehensive Question Banks:</strong> Efficiently Build
+                and Manage Questions Classified By Difficulty and Subject</li>
+              <li><i class="ri-check-double-line"></i> <strong>AI-Powered Assessment:</strong> From Cheating Detection
+                to Dynamic Exam Generation For Secure Evaluations</li>
+              <li><i class="ri-check-double-line"></i> <strong>Actionable Insights:</strong> Identify Performance
+                Patterns to Optimize Learning Outcomes</li>
+              <li><i class="ri-check-double-line"></i> <strong>Seamless Integration:</strong> Modular Platform Scales
+                From Schools to National Systems</li>
+            </ul>
+            <p>
+              This isn't a Concept - it's a Proven Solution Already Aligned With Vision 2030 Goals and Ready For
+              Immediate Implementation.
+            </p>
+          </div>
+
+          <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/features-3-2.jpg" alt="Ready-to-Implement Education Assessment System"
+              class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section><!-- /Alt Services 2 Section -->
+
     <!-- ======= Meeting Section ======= -->
-    <section id="meeting" class="contact">
+    <section id="meeting" class="contact" style="padding-top: 10px;">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -1143,7 +1195,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
     </section><!-- End Meeting Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" style="padding-top: 10px;">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -1256,7 +1308,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
       </div>
     </section>
     <!-- End Contact Section -->
-
 
   </main><!-- End #main -->
 

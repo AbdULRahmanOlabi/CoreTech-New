@@ -477,33 +477,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
     <section id="tabs" class="tabs">
       <div class="container" data-aos="fade-up">
 
-        <ul class="nav nav-tabs row d-flex">
+        <div class="section-title" dir="rtl">
+          <h2>مميزاتنا الفريدة</h2>
+          <p>حلول متطورة تقدم أعلى مستويات الأداء، المرونة والقدرة على التكيف مع احتياجاتك، مصممة لتحقيق قيمة تجارية
+            حقيقية على جميع الأصعدة</p>
+        </div>
+
+        <ul class="nav nav-tabs row d-flex" dir="rtl">
           <li class="nav-item col-3">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-              <i class=""><iconify-icon icon="mdi:database-cog" width="1.2em" height="1.2em"></iconify-icon></i>
+              <i class=""><iconify-icon icon="mdi:database-cog"></iconify-icon></i>
               <h4 class="d-none d-lg-block">إدارة قواعد البيانات</h4>
             </a>
           </li>
 
           <li class="nav-item col-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-              <i class=""><iconify-icon icon="game-icons:team-idea" width="1.2em" height="1.2em"></iconify-icon></i>
+              <i class=""><iconify-icon icon="game-icons:team-idea"></iconify-icon></i>
               <h4 class="d-none d-lg-block">قسم الذكاء الاصطناعي</h4>
             </a>
           </li>
 
           <li class="nav-item col-3">
             <a class="nav-link " data-bs-toggle="tab" data-bs-target="#tab-3">
-              <i class=""><iconify-icon icon="carbon:ibm-open-enterprise-languages" width="1.2em"
-                  height="1.2em"></iconify-icon></i>
+              <i class=""><iconify-icon icon="carbon:ibm-open-enterprise-languages"></iconify-icon></i>
               <h4 class="d-none d-lg-block">تطوير المكدس الكامل</h4>
             </a>
           </li>
 
           <li class="nav-item col-3">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-              <i class=""><iconify-icon icon="mdi:mobile-phone-settings-variant" width="1.2em"
-                  height="1.2em"></iconify-icon></i>
+              <i class=""><iconify-icon icon="mdi:mobile-phone-settings-variant"></iconify-icon></i>
               <h4 class="d-none d-lg-block">تطوير تطبيقات الموبايل</h4>
             </a>
           </li>
@@ -1116,8 +1120,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
       </div>
     </section>End Team Section -->
 
+    <!-- Alt Services 2 Section -->
+    <section id="alt-services-2" class="alt-services-2 section" dir="rtl">
+      <div class="section-title">
+        <h2>حلولنا</h2>
+        <p>اكتشف قوة نظام تقييم التعليم الجاهز للتنفيذ لدينا</p>
+      </div>
+
+      <div class="container">
+        <div class="row justify-content-around gy-4">
+          <div class="col-lg-6 d-flex flex-column justify-content-center order-1 order-lg-2 solution-content"
+            data-aos="fade-up" data-aos-delay="100">
+            <h3>
+              <a href="https://ies-mena.net/" class="project-link" target="_blank">
+                نظام التعليم الذكي (IES)
+              </a>
+            </h3>
+            <p>
+              في IES، قمنا بتطوير منصة تقييم كاملة وجاهزة للنشر تعمل بالفعل على تحويل التعليم في المملكة العربية
+              السعودية. نظامنا ليس مجرد مفهوم - إنه حل تشغيلي بالكامل يتوافق تمامًا مع أهداف رؤية 2030، مما يمكن
+              المؤسسات من بناء مجتمع مزدهر قائم على المعرفة اليوم.
+            </p>
+            <ul class="feature-list">
+              <li><i class="ri-check-double-line"></i> <strong>مسارات التعلم المنهجية:</strong> رسم مرئي لرحلة كل متعلم
+                مع أنشطة متصلة بالأهداف التعليمية</li>
+              <li><i class="ri-check-double-line"></i> <strong>بنوك الأسئلة الشاملة:</strong> بناء وإدارة الأسئلة
+                المصنفة حسب الصعوبة والموضوع بكفاءة</li>
+              <li><i class="ri-check-double-line"></i> <strong>التقييم المدعوم بالذكاء الاصطناعي:</strong> من كشف الغش
+                إلى توليد الاختبارات الديناميكية للتقييمات الآمنة</li>
+              <li><i class="ri-check-double-line"></i> <strong>رؤى قابلة للتنفيذ:</strong> تحديد أنماط الأداء لتحسين
+                النتائج التعليمية</li>
+              <li><i class="ri-check-double-line"></i> <strong>التكامل السلس:</strong> منصة معيارية تتوسع من المدارس إلى
+                الأنظمة الوطنية</li>
+            </ul>
+            <p>
+              هذا ليس مفهوماً - إنه حل مثبت متوافق بالفعل مع أهداف رؤية 2030 وجاهز للتنفيذ الفوري.
+            </p>
+          </div>
+
+          <div class="features-image col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+            <img src="../assets/img/features-3-2.jpg" alt="نظام تقييم التعليم الجاهز للتنفيذ" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section><!-- /Alt Services 2 Section -->
+
     <!-- ======= Meeting Section ======= -->
-    <section id="meeting" class="contact">
+    <section id="meeting" class="contact" style="padding-top: 10px;">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -1155,7 +1204,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
     </section><!-- End Meeting Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" style="padding-top: 10px;">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">

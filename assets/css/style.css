@@ -30,7 +30,7 @@ h6 {
   --color-primary: #e30512;
 }
 
-html[lang="ar"] .input-group{
+html[lang="ar"] .input-group {
   text-align: left;
   direction: ltr;
 }
@@ -894,6 +894,7 @@ section {
 /*--------------------------------------------------------------
 # Tabs
 --------------------------------------------------------------*/
+/* English/LTR Styles */
 .tabs .nav-tabs {
   border: 0;
 }
@@ -902,18 +903,24 @@ section {
   border: 1px solid #b9b9b9;
   padding: 15px;
   transition: 0.3s;
-  color: #111111;
-  border-radius: 0;
+  color: #495057;
+  border-radius: 5px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border-radius: 5px;
+  background: transparent;
+  text-align: center;
+  gap: 8px; /* Space between icon and text */
 }
 
 .tabs .nav-link i {
-  padding-right: 15px;
   font-size: 48px;
+  margin: 0; /* Remove any default margins */
+  padding: 0; /* Remove padding */
+  display: flex;
+  justify-content: center;
 }
 
 .tabs .nav-link h4 {
@@ -924,33 +931,46 @@ section {
 
 .tabs .nav-link:hover {
   color: #e30512;
+  border-color: #e30512;
 }
 
 .tabs .nav-link.active {
-  background: #e30512;
-  color: #fff;
-  border-color: #e30512;
-  border-radius: 5px;
+  background: transparent;
+  color: #e30512;
+  border: 2px solid #e30512;
 }
 
+/* Arabic/RTL Overrides */
+[dir="rtl"] .tabs .nav-link {
+  flex-direction: column; /* Maintain column layout */
+}
+
+[dir="rtl"] .tabs .nav-link i {
+  padding-left: 0; /* Remove any left padding */
+  padding-right: 0; /* Remove any right padding */
+}
+
+[dir="rtl"] .tabs .nav-tabs {
+  text-align: right;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .tabs .nav-link i {
-    padding: 0;
-    line-height: 1;
     font-size: 36px;
   }
 }
 
 @media (max-width: 575px) {
   .tabs .nav-link {
-    padding: 15px;
+    padding: 10px;
   }
-
   .tabs .nav-link i {
     font-size: 24px;
   }
 }
 
+/* Rest of your existing styles remain unchanged */
 .tabs .tab-content {
   margin-top: 30px;
 }
@@ -977,6 +997,12 @@ section {
 
 .tabs .tab-pane p:last-child {
   margin-bottom: 0;
+}
+
+/* RTL specific adjustments */
+[dir="rtl"] .tabs .tab-pane ul i {
+  padding-right: 0;
+  padding-left: 4px;
 }
 
 /*--------------------------------------------------------------
@@ -1075,6 +1101,73 @@ section {
   font-size: 14px;
 }
 
+/* Custom styles for the solution section */
+.alt-services-2 .solution-content {
+  text-align: justify;
+}
+
+.alt-services-2 .feature-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.alt-services-2 .feature-list li {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.alt-services-2 .feature-list i.ri-check-double-line {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #e30512;
+}
+
+.alt-services-2 .features-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Project link styling */
+.project-link {
+  color: #e30512;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  padding-bottom: 3px;
+}
+
+.project-link:hover {
+  color: #b0040e;
+}
+
+/* RTL specific adjustments */
+html[lang="ar"] .project-link {
+  padding-right: 0;
+  padding-left: 3px;
+}
+
+/* Arabic */
+
+html[lang="ar"] .alt-services-2 .solution-content,
+html[lang="ar"] .alt-services-2 .feature-list li {
+  text-align: right;
+}
+
+html[lang="ar"] .alt-services-2 .feature-list i.ri-check-double-line {
+  padding-right: 0;
+  padding-left: 4px;
+  transform: scaleX(-1);
+}
+
+html[lang="ar"] .section-title {
+  text-align: center;
+}
+
+html[lang="ar"] .ltr-content {
+  direction: ltr;
+  text-align: left;
+}
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -2246,7 +2339,6 @@ section {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Cairo", sans-serif;
-  
 }
 
 #footer .footer-top h4 {
@@ -2411,7 +2503,6 @@ section {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Cairo", sans-serif;
-  
 }
 
 #footer .footer-top-AR h4 {
