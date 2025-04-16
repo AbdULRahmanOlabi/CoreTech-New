@@ -1159,7 +1159,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["cv"])) {
           </div>
 
           <div class="features-image col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-            <img src="../assets/img/features-3-2.jpg" alt="نظام تقييم التعليم الجاهز للتنفيذ" class="img-fluid">
+            <img src="../assets/img/features-3-2.png" alt="نظام تقييم التعليم الجاهز للتنفيذ" class="img-fluid">
           </div>
         </div>
       </div>
